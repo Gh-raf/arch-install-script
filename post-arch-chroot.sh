@@ -64,8 +64,8 @@ sudo -u $username yay -S --noconfirm --nopgpfetch xorg-server xorg-xinit xdo \
 	git fish dash devour \
 	emacs neovim kitty ranger zathura cava mpv sxiv qutebrowser \
 	figlet toilet cmatrix lolcat fortune-mod \
-	hmcl stretchly-bin firefox-developer-edition visual-studio-code-bin \
-	ttf-linux-libertine ttf-inconsolata noto-fonts ttf-font-awesome ttf-anonymous-pro ttf-dejavu ttf-liberation ttf-unifont ttf-ms-fonts
+	stretchly-bin firefox-developer-edition visual-studio-code-bin \
+	ttf-linux-libertine ttf-inconsolata noto-fonts ttf-font-awesome ttf-anonymous-pro ttf-dejavu ttf-liberation ttf-ms-fonts
 					# mpd + nmcpppmcpppcc
 
 # Enable systemd services
