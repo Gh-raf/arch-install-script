@@ -5,7 +5,7 @@ set -e
 ##################################
 
 blk_dev='sda'
-sctr_l='512'
+sctr_l=$(cat /sys/block/$blk_dev/queue/hw_sector_size)
 boot='512'
 swap='8192'
 root='30720'
