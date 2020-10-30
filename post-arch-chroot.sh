@@ -56,7 +56,7 @@ echo $username | sudo -Su $username yes | makepkg -si && rm -rf ../yay
 
 # Install Xserver, Drivers, Sound, Deamons, (DE), Programs, Dumb stuff, Bloated programs, Fonts
 
-sudo -u $username yay -S --noconfirm --nopgpfetch xorg-server xorg-xinit xdo \
+sudo -u $username yay -S --noconfirm --nopgpfetch xorg-server xorg-xinit xdo xdg-user-dirs \
 	mesa xf86-video-intel libva-intel-driver libva-utils libva-vdpau-driver vdpauinfo \
 	alsa-utils pulseaudio pulseaudio-alsa pulseaudio-ctl \
 	cpupower gamemode ananicy \
