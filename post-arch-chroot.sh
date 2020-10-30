@@ -14,7 +14,7 @@ locale='en_GB.UTF-8 UTF-8'
 ####     UTILITY FUNCTIONS    ####
 ##################################
 
-un_cmt () { sed -i 's/^[^\S\n]*#\s*'"$2"/"$2"/ $1; }
+un_cmt () { sudo sed -i 's/^[^\S\n]*#\s*'"$2"/"$2"/ $1; }
 cfg () { echo $HOME/.config/$1; }
 mkd () { mkdir -p $(cfg $1); }
 ins () { install -Dm755 $1 $(cfg $2); }
@@ -28,27 +28,32 @@ pacman -Syy
 # Setup the Timezone, Localisation, Language, Keymap, Hostname, Hosts
 ln -sf /usr/share/zoneinfo/$zone /etc/localtime && hwclock --systohc
 un_cmt /etc/locale.gen "$locale" && locale-gen
-echo LANG="${locale/ */}" >> /etc/locale.conf
-echo KEYMAP=$keymap >> /etc/vconsole.conf
+echo LANG="${locale/ */}" > /etc/locale.conf
+echo KEYMAP=$keymap > /etc/vconsole.conf
 echo $hostname > /etc/hostname
-echo '\n127.0.0.1\tlocalhost\n::1\t\tlocalhost\n127.0.1.1\t'$hostname'.localdomain\t'$hostname >> /etc/hosts
+echo '\n127.0.0.1\tlocalhost\n::1\t\tlocalhost\n127.0.1.1\t'$hostname'.localdomain\t'$hostname > /etc/hosts
 
 # Install Boot, CPU, Drivers, Sound related stuff ...
-pacman -S --noconfirm networkmanager grub efibootmgr os-prober intel-ucode yay
-
-# Enable NetworkManager
-systemctl enable NetworkManager
+pacman -S --noconfirm networkmanager grub efibootmgr os-prober intel-ucode
 
 # Setup GRUB
 grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=Arch
 grub-mkconfig -o /boot/grub/grub.cfg
+
+# Add user
+useradd -m -g wheel -G audio,video,storage $username
+su - $username
+cd
+
+# Install yay
+git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si && cd && rm -rf yay
 
 ##################################
 ####   Refining the Desktop   ####
 ##################################
 
 # Install Xserver, Drivers, Deamons, (DE), Programs, Dumb stuff, Bloated programs, Fonts                  
-yay -S --noconfirm xorg-server xorg-xinit xdo \
+sudo yay -S --noconfirm xorg-server xorg-xinit xdo \
 	mesa xf86-video-intel libva-intel-driver libva-utils libva-vdpau-driver vdpauinfo \
 	alsa-utils pulseaudio pulseaudio-alsa pulseaudio-ctl \
 	cpupower gamemode ananicy \
@@ -60,27 +65,20 @@ yay -S --noconfirm xorg-server xorg-xinit xdo \
 	ttf-linux-libertine ttf-inconsolata noto-fonts ttf-font-awesome ttf-anonymous-pro ttf-dejavu ttf-liberation ttf-unifont ttf-ms-fonts
 					# mpd + nmcpppmcpppcc
 
-# Enable cpupower & ananicy
-systemctl enable cpupower
-systemctl enable ananicy
+# Enable systemd services
+systemctl enable NetworkManager
+sudo systemctl enable cpupower
+sudo systemctl enable ananicy
 
 # sh => dash for performance
-cd /bin && rm sh && ln -s dash sh
+cd /bin && sudo rm sh && sudo ln -s dash sh
 
 # Give sudo perms to wheel group
 un_cmt /etc/sudoers '%wheel ALL=(ALL) NOPASSWD: ALL'
 
-# Manage users
-useradd -m -g wheel -G audio,video,storage $username
-chpasswd <<< "$username:$username"
-chpasswd <<< "root:root"
-
 ##################################
 ####    Environment Setup     ####
 ##################################
-
-# Login ad $USER
-su - $username
 
 # Autorun Bspwm on X server startup
 echo 'exec bspwm' >> $HOME/.xinitrc
@@ -117,6 +115,9 @@ echo '@import "~/.cache/wal/colors-rofi-dark";' >> $(cfg rofi)/config.rasi
 
 # No mouse accel
 echo 'for id in $(seq 50); do if [ ! -z "$(xinput list-props $id 2>/dev/null | grep '\''libinput Accel Profile Enabled ('\'')" ]; then xinput --set-prop $id '\''libinput Accel Profile Enabled'\'' 0, 1 && echo '\''Changing Accel Profile for <device id '\''"$id"'\''> to (0, 1)'\''; fi; done' >> $HOME/.xinitrc
+
+chpasswd <<< "$username:$username"
+chpasswd <<< "root:root"
 
 # END
 
