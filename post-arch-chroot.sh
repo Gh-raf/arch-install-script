@@ -31,7 +31,7 @@ un_cmt /etc/locale.gen "$locale" && locale-gen
 echo LANG="${locale/ */}" > /etc/locale.conf
 echo KEYMAP=$keymap > /etc/vconsole.conf
 echo $hostname > /etc/hostname
-echo '\n127.0.0.1\tlocalhost\n::1\t\tlocalhost\n127.0.1.1\t'$hostname'.localdomain\t'$hostname > /etc/hosts
+sed -i a'\n127.0.0.1\tlocalhost\n::1\t\tlocalhost\n127.0.1.1\t'$hostname'.localdomain\t'$hostname /etc/hosts
 
 # Install Boot, CPU, Drivers, Sound related stuff ...
 pacman -S --noconfirm networkmanager grub efibootmgr os-prober intel-ucode git
