@@ -1,20 +1,10 @@
 set -e
 
-##################################
-####          CONFIG          ####
-##################################
-
-hostname='FlowBox'
-username='adderall'
-keymap='colemak'
-zone='Europe/London'
-locale='en_GB.UTF-8 UTF-8'
-
-##################################
-####     UTILITY FUNCTIONS    ####
-##################################
-
-un_cmt () { sed -i 's/^[^\S\n]*#\s*'"$2"/"$2"/ $1; }
+hostname+='FlowBox'
+username+='adderall'
+keymap+='colemak'
+zone+='Europe/London'
+locale+='en_GB.UTF-8 UTF-8'
 
 ##################################
 ####    Post-installation     ####
@@ -24,16 +14,19 @@ pacman -Syy
 
 # Setup the Timezone, Localisation, Language, Keymap, Hostname, Hosts
 ln -sf /usr/share/zoneinfo/$zone /etc/localtime && hwclock --systohc
-un_cmt /etc/locale.gen "$locale" && locale-gen
+sed -i -E 's/#[^\S\n]*'"$locale"/"$locale"/ /etc/locale.gen && locale-gen
 echo LANG="${locale/ */}" > /etc/locale.conf
 echo KEYMAP=$keymap > /etc/vconsole.conf
 echo $hostname > /etc/hostname
-sed -i a'\n127.0.0.1\tlocalhost\n::1\t\tlocalhost\n127.0.1.1\t'$hostname'.localdomain\t'$hostname /etc/hosts
+sed -i a"
+127.0.0.1	localhost
+::1			localhost
+127.0.1.1	$hostname.localdomain	$hostname" /etc/hosts
 
-# Install Boot, CPU, Drivers, Sound related stuff ...
+# Install networkmanager, bootloader, microcode and git
 pacman -S --noconfirm networkmanager grub efibootmgr os-prober intel-ucode git
 
-# Setup GRUB
+# Setup grub
 grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=Arch
 grub-mkconfig -o /boot/grub/grub.cfg
 
@@ -42,36 +35,13 @@ useradd -m -g wheel -G audio,video,storage $username
 chpasswd <<< "$username:$username"
 chpasswd <<< "root:root"
 
-# Give sudo perms to wheel group
-un_cmt /etc/sudoers '%wheel ALL=(ALL) NOPASSWD: ALL'
+# Give wheel group sudo perms
+sed -i -E 's/\s*#\s*(%wheel ALL=\(ALL\) NOPASSWD: ALL)/\1/' /etc/sudoers
 
 # Install yay
 sudo -u $username mkdir /home/$username/dev && cd /home/$username/dev 
 sudo -u $username git clone https://aur.archlinux.org/yay.git && cd yay
 echo $username | sudo -Su $username yes | makepkg -si && rm -rf ../yay
 
-##################################
-####   Refining the Desktop   ####
-##################################
-
-# Install Xserver, Drivers, Sound, Deamons, (DE), Programs, Dumb stuff, Bloated programs, Fonts
-
-sudo -u $username yay -S --noconfirm --nopgpfetch xorg-server xorg-xinit xdo \
-	mesa xf86-video-intel libva-intel-driver libva-utils libva-vdpau-driver vdpauinfo \
-	alsa-utils pulseaudio pulseaudio-alsa pulseaudio-ctl \
-	cpupower gamemode ananicy \
-	bspwm sxhkd polybar picom python-pywal rofi \
-	git fish dash devour \
-	emacs neovim kitty ranger zathura cava mpv sxiv qutebrowser \
-	figlet toilet cmatrix lolcat fortune-mod \
-	stretchly-bin firefox-developer-edition visual-studio-code-bin \
-	ttf-linux-libertine ttf-inconsolata noto-fonts ttf-font-awesome ttf-anonymous-pro ttf-dejavu ttf-liberation ttf-ms-fonts
-					# mpd + nmcpppmcpppcc
-
-# Enable systemd services
-systemctl enable NetworkManager
-systemctl enable cpupower
-systemctl enable ananicy
-
-# sh => dash for performance
-cd /bin && rm sh && ln -s dash sh
+# Install packages at ./packages
+sudo -u $username yay -S --noconfirm --nopgpfetch $(sed -e 's/#.*$//' packages)
