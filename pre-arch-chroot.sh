@@ -54,6 +54,6 @@ mkdir -p /mnt/boot && mount $(x 1) /mnt/boot
 mkdir /mnt/home && mount $(x 4) /mnt/home
 
 # Install Base System (tty)
-pacstrap /mnt base base-devel linux linux-firmware man-db man-pages texinfo
+pacstrap /mnt base base-devel linux linux-firmware man-db man-pages texinfo neovim git
 genfstab -U /mnt >> /mnt/etc/fstab
 arch-chroot /mnt
