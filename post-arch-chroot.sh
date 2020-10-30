@@ -15,9 +15,6 @@ locale='en_GB.UTF-8 UTF-8'
 ##################################
 
 un_cmt () { sed -i 's/^[^\S\n]*#\s*'"$2"/"$2"/ $1; }
-cfg () { echo $HOME/.config/$1; }
-mkd () { mkdir -p $(cfg $1); }
-ins () { install -Dm755 $1 $(cfg $2); }
 
 ##################################
 ####    Post-installation     ####
@@ -45,6 +42,9 @@ useradd -m -g wheel -G audio,video,storage $username
 chpasswd <<< "$username:$username"
 chpasswd <<< "root:root"
 
+# Give sudo perms to wheel group
+un_cmt /etc/sudoers '%wheel ALL=(ALL) NOPASSWD: ALL'
+
 # Install yay
 sudo -u $username mkdir /home/$username/dev && cd /home/$username/dev 
 sudo -u $username git clone https://aur.archlinux.org/yay.git && cd yay
@@ -56,7 +56,7 @@ echo $username | sudo -Su $username yes | makepkg -si && rm -rf ../yay
 
 # Install Xserver, Drivers, Sound, Deamons, (DE), Programs, Dumb stuff, Bloated programs, Fonts
 
-sudo -u $username yay -S --noconfirm --nopgpfetch xorg-server xorg-xinit xdo xdg-user-dirs \
+sudo -u $username yay -S --noconfirm --nopgpfetch xorg-server xorg-xinit xdo \
 	mesa xf86-video-intel libva-intel-driver libva-utils libva-vdpau-driver vdpauinfo \
 	alsa-utils pulseaudio pulseaudio-alsa pulseaudio-ctl \
 	cpupower gamemode ananicy \
@@ -75,6 +75,3 @@ systemctl enable ananicy
 
 # sh => dash for performance
 cd /bin && rm sh && ln -s dash sh
-
-# Give sudo perms to wheel group
-un_cmt /etc/sudoers '%wheel ALL=(ALL) NOPASSWD: ALL'
