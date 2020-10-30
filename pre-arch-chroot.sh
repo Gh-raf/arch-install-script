@@ -15,7 +15,7 @@ root='30720'
 ##################################
 
 cal() { awk "BEGIN{print $*}"; }
-dec () { cal $* - $sctr_l }
+dec () { cal $* - $sctr_l; }
 MiB_B () { cal $1 \* 1048576; }
 x () { echo /dev/$blk_dev$1; }
 
@@ -27,7 +27,7 @@ x () { echo /dev/$blk_dev$1; }
 [ -d /sys/firmware/efi ] || (echo 'Non-UEFI boot modes aren'\''t supported! Aborting...' && sleep 5 && exit)
 
 # Calculate disk space for each partition
-boot_end=$(cal $(2048 * sctr_l) + $(MiB_B $boot))B
+boot_end=$(cal $(2048 \* sctr_l) + $(MiB_B $boot))B
 swap_end=$(cal $boot_end + $(MiB_B $swap))B
 root_end=$(cal $swap_end + $(MiB_B $root))B
 
