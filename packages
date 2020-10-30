@@ -1,0 +1,29 @@
+# X server
+xorg-server xorg-xinit xdo
+
+# Drivers
+mesa xf86-video-intel libva-intel-driver libva-utils libva-vdpau-driver vdpauinfo 
+
+# Sound related stuff, idk
+alsa-utils pulseaudio pulseaudio-alsa pulseaudio-ctl 
+
+# Deamons that claim to have a great impact on performance
+cpupower gamemode ananicy 
+
+# Desktop eXPrience
+bspwm sxhkd polybar picom python-pywal rofi 
+
+# Terminals
+fish dash devour tmux
+
+# Simple extensible minimalist software
+emacs neovim kitty ranger zathura cava mpv sxiv qutebrowser mpd ncmpcpp 
+
+# Skr3ptZ
+figlet toilet cmatrix lolcat fortune-mod 
+
+# Bloated software
+stretchly-bin firefox-developer-edition visual-studio-code-bin 
+
+# Fonts
+ttf-linux-libertine ttf-inconsolata noto-fonts ttf-font-awesome ttf-anonymous-pro ttf-dejavu ttf-liberation ttf-ms-fonts
