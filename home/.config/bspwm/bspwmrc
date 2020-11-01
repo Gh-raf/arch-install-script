@@ -1,17 +1,5 @@
 #!/bin/sh
 
-for id in $(seq 50); do 
-	if [ ! -z "$(xinput list-props $id 2>/dev/null | grep 'libinput Accel Profile Enabled (')" ]; then
-		xinput --set-prop $id 'libinput Accel Profile Enabled' 0, 1 && echo 'Changing Accel Profile for <device id '"$id"'> to (0, 1)'
-	fi
-done
-
-setkbmap fr
-
-picom -f &
-$HOME/.config/polybar/launch
-wal -R
-
 pgrep -x sxhkd > /dev/null || sxhkd &
 
 bspc monitor -d I II III IV V VI VII VIII IX X

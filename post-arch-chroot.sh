@@ -18,13 +18,17 @@ sed -i -E 's/#[^\S\n]*'"$locale"/"$locale"/ /etc/locale.gen && locale-gen
 echo LANG="${locale/ */}" > /etc/locale.conf
 echo KEYMAP=$keymap > /etc/vconsole.conf
 echo $hostname > /etc/hostname
-sed -i a"
+echo "
 127.0.0.1	localhost
 ::1			localhost
-127.0.1.1	$hostname.localdomain	$hostname" /etc/hosts
+127.0.1.1	$hostname.localdomain	$hostname" >> /etc/hosts
 
 # Install networkmanager, bootloader, microcode and git
-pacman -S --noconfirm networkmanager grub efibootmgr os-prober intel-ucode git
+pacman -S --noconfirm networkmanager grub efibootmgr os-prober intel-ucode
+
+
+# Enable Internet for next session
+systemctl enable NetworkManager
 
 # Setup grub
 grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=Arch
@@ -41,7 +45,7 @@ sed -i -E 's/\s*#\s*(%wheel ALL=\(ALL\) NOPASSWD: ALL)/\1/' /etc/sudoers
 # Install yay
 sudo -u $username mkdir /home/$username/dev && cd /home/$username/dev 
 sudo -u $username git clone https://aur.archlinux.org/yay.git && cd yay
-echo $username | sudo -Su $username yes | makepkg -si && rm -rf ../yay
+yes | sudo -Su $username makepkg -si && rm -rf ../yay
 
 # Install packages at ./packages
-sudo -u $username yay -S --noconfirm --nopgpfetch $(sed -e 's/#.*$//' packages)
+sudo -u $username yay -S --noconfirm --nopgpfetch $(sed -e 's/#.*$//' "$(cd "$(dirname $0)" && pwd)/pkgs")

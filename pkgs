@@ -1,5 +1,5 @@
 # X server
-xorg-server xorg-xinit xdo
+xorg-server xorg-xinit xdg-user-dirs xdo
 
 # Drivers
 mesa xf86-video-intel libva-intel-driver libva-utils libva-vdpau-driver vdpauinfo 
