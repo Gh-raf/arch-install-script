@@ -26,7 +26,7 @@ fish dash devour tmux
 emacs neovim kitty ranger zathura cava mpv sxiv qutebrowser mpd ncmpcpp cordless
 
 # Skr3ptZ
-figlet toilet cmatrix lolcat fortune-mod
+figlet toilet cmatrix lolcat fortune-mod cowsay
 
 # Bloated software
 stretchly-bin firefox-developer-edition visual-studio-code-bin
