@@ -1,1 +1,1 @@
-fish -c 'cat ~/.cache/wal/sequences' &
+[ -f "$HOME"/.cache/wal/sequences' ] && fish -c 'cat "$HOME"/.cache/wal/sequences' &
