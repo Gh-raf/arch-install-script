@@ -5,6 +5,7 @@ username+='adderall'
 keymap+='colemak'
 zone+='Europe/London'
 locale+='en_GB.UTF-8 UTF-8'
+cpu_manufacturer+='intel' # intel/amd
 
 ##################################
 ####    Post-installation     ####
@@ -19,12 +20,12 @@ echo LANG="${locale/ */}" > /etc/locale.conf
 echo KEYMAP=$keymap > /etc/vconsole.conf
 echo $hostname > /etc/hostname
 echo "
-127.0.0.1	localhost
-::1			localhost
-127.0.1.1	$hostname.localdomain	$hostname" >> /etc/hosts
+127.0.0.1\tlocalhost
+::1\t\tlocalhost
+127.0.1.1\t$hostname.localdomain\t$hostname" >> /etc/hosts
 
 # Install networkmanager, bootloader, microcode and git
-pacman -S --noconfirm networkmanager grub efibootmgr os-prober intel-ucode
+pacman -S --noconfirm networkmanager grub efibootmgr os-prober "$cpu_manufacturer"-ucode
 
 
 # Enable Internet for next session
