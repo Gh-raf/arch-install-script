@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Set custom screen resolution
-xrandr -s 1600x900
+# xrandr -s <size>/<width>x<height>
 
 # Disable mouse acceleration (Why the FUCK is it enabled by default!)
 for id in $(seq 50); do 
@@ -13,8 +13,11 @@ done
 # Set custom keyboard layout
 setkbmap colemak
 
-# Execute programs (WM, Compositor, App launcher, Bar, ...)
+# Run Bspwm, Py-wal, Picom, Polybar
 exec bspwm
 wal -R
 picom -f &
-$HOME/.config/polybar/launch
+
+killall -q polybar
+while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
+polybar example &
