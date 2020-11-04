@@ -1,1 +1,1 @@
-fish -c 'cat ~/.cache/wal/sequences\' &
+fish -c 'cat ~/.cache/wal/sequences' &
