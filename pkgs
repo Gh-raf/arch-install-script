@@ -12,9 +12,9 @@ mesa xf86-video-intel libva-intel-driver libva-utils libva-vdpau-driver vdpauinf
 # Tune volume: amixer alsamixer pulseaudio-ctl
 alsa-utils pulseaudio pulseaudio-alsa pulseaudio-ctl
 
-# Deamons that claim to have a great impact on performance
+# Deamons, Utility programs
 # systemctl enable --now cpupower ananicy
-cpupower gamemode ananicy
+cpupower gamemode ananicy reflector
 
 # Desktop eXPrience
 bspwm sxhkd polybar picom python-pywal rofi
