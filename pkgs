@@ -23,7 +23,7 @@ bspwm sxhkd polybar picom python-pywal rofi feh
 fish dash devour tmux
 
 # Simple extensible minimalist software
-emacs neovim kitty ranger zathura cava mpv sxiv qutebrowser mpd ncmpcpp cordless
+emacs neovim kitty ranger zathura cava mpv sxiv qutebrowser mpd ncmpcpp cordless-git
 
 # Skr3ptZ
 figlet toilet cmatrix lolcat fortune-mod cowsay
