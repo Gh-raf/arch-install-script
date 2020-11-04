@@ -1,4 +1,5 @@
 # X server
+# Run xdg-user-dirs-update once
 xorg-server xorg-xinit xorg-xinput xdg-user-dirs xdo
 
 # Drivers
@@ -12,6 +13,7 @@ mesa xf86-video-intel libva-intel-driver libva-utils libva-vdpau-driver vdpauinf
 alsa-utils pulseaudio pulseaudio-alsa pulseaudio-ctl
 
 # Deamons that claim to have a great impact on performance
+# systemctl enable --now cpupower ananicy
 cpupower gamemode ananicy
 
 # Desktop eXPrience
@@ -21,7 +23,7 @@ bspwm sxhkd polybar picom python-pywal rofi
 fish dash devour tmux
 
 # Simple extensible minimalist software
-emacs neovim kitty ranger zathura cava mpv sxiv qutebrowser mpd ncmpcpp
+emacs neovim kitty ranger zathura cava mpv sxiv qutebrowser mpd ncmpcpp cordless
 
 # Skr3ptZ
 figlet toilet cmatrix lolcat fortune-mod
