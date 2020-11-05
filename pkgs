@@ -13,7 +13,7 @@ mesa xf86-video-intel libva-intel-driver libva-utils libva-vdpau-driver vdpauinf
 alsa-utils pulseaudio pulseaudio-alsa pulseaudio-ctl
 
 # Deamons, Utility programs
-# systemctl enable --now cpupower ananicy
+# systemctl enable --now cpupower ananicy libvirtd && usermod -G libvirtd -a $username
 cpupower gamemode ananicy reflector qemu libvirt ebtables virt-manager
 
 # Desktop eXPrience
