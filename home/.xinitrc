@@ -1,5 +1,9 @@
 #!/bin/sh
 
+export XDG_CONFIG_HOME="$HOME/.local"
+export XDG_CACHE_HOME="$HOME/.cache"
+export XDG_DATA_HOME="$HOME/.local/share"
+
 # Set custom screen resolution
 # xrandr -s <size>/<width>x<height>
 
