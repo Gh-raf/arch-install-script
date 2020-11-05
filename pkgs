@@ -14,7 +14,7 @@ alsa-utils pulseaudio pulseaudio-alsa pulseaudio-ctl
 
 # Deamons, Utility programs # maybe lxsession is not mandatory ?
 # systemctl enable --now cpupower ananicy libvirtd && usermod -G libvirt -a "$(basename "$HOME")"
-cpupower gamemode ananicy reflector qemu libvirt ebtables virt-manager lxsession
+cpupower gamemode ananicy reflector qemu libvirt ebtables virt-manager lxsession dnsmasq
 
 # Desktop eXPrience
 bspwm sxhkd polybar picom python-pywal rofi feh tdrop-git
