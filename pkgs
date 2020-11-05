@@ -14,7 +14,7 @@ alsa-utils pulseaudio pulseaudio-alsa pulseaudio-ctl
 
 # Deamons, Utility programs
 # systemctl enable --now cpupower ananicy
-cpupower gamemode ananicy reflector
+cpupower gamemode ananicy reflector qemu libvirt ebtables virt-manager
 
 # Desktop eXPrience
 bspwm sxhkd polybar picom python-pywal rofi feh tdrop-git
@@ -23,7 +23,7 @@ bspwm sxhkd polybar picom python-pywal rofi feh tdrop-git
 fish dash devour tmux
 
 # Simple extensible minimalist software
-emacs neovim kitty ranger zathura cava mpv sxiv qutebrowser mpd ncmpcpp cordless-git
+emacs neovim kitty ranger zathura cava mpv sxiv qutebrowser mpd ncmpcpp cordless-git neofetch
 
 # Skr3ptZ
 figlet toilet cmatrix lolcat fortune-mod cowsay
