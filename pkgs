@@ -12,9 +12,9 @@ mesa lib32-mesa xf86-video-intel libva-intel-driver libva-utils libva-vdpau-driv
 # Tune volume: amixer alsamixer pulseaudio-ctl
 alsa-utils pulseaudio pulseaudio-alsa pulseaudio-ctl
 
-# Deamons, Utility programs # maybe lxsession is not mandatory ?
+# Deamons, Utility programs
 # systemctl enable --now cpupower ananicy libvirtd && usermod -G libvirt -a "$(basename "$HOME")"
-cpupower gamemode ananicy reflector qemu libvirt ebtables virt-manager lxsession dnsmasq
+cpupower gamemode ananicy reflector qemu libvirt ebtables virt-manager dnsmasq
 
 # Desktop eXPrience
 bspwm sxhkd polybar picom python-pywal rofi feh tdrop-git
