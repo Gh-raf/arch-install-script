@@ -6,7 +6,7 @@ xorg-server xorg-xinit xorg-xinput xdg-user-dirs xdo
 # Hardware Acceleration <https://wiki.archlinux.org/index.php/Hardware_video_acceleration>
 # vainfo (libva-utils): VAEntrypointVLD / VAEntrypointEncSlice => able to decode / encode format
 # vdpauinfo: No error message => Great
-mesa lib32-mesa xf86-video-intel libva-intel-driver libva-utils libva-vdpau-driver vdpauinfo
+mesa lib32-mesa vulkan-intel lib32-vulkan-intel xf86-video-intel libva-intel-driver libva-utils # libva-vdpau-driver vdpauinfo
 
 # Sound related stuff, idk
 # Tune volume: amixer alsamixer pulseaudio-ctl
