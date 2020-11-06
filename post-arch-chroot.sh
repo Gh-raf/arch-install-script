@@ -27,7 +27,6 @@ echo "
 # Install networkmanager, bootloader, microcode and git
 pacman -S --noconfirm networkmanager grub efibootmgr os-prober "$cpu_manufacturer"-ucode
 
-
 # Enable Internet for next session
 systemctl enable NetworkManager
 
@@ -42,6 +41,9 @@ chpasswd <<< "root:root"
 
 # Give wheel group sudo perms
 sed -i -E 's/\s*#\s*(%wheel ALL=\(ALL\) NOPASSWD: ALL)/\1/' /etc/sudoers
+
+# Enable multilib repo
+sed -i -E 's/\s*#\s*(\[multilib\])/\1\nInclude = \/etc\/pacman\.d\/mirrorlist/' /etc/pacman.conf
 
 # Install yay
 sudo -u $username mkdir /home/$username/dev && cd /home/$username/dev 
