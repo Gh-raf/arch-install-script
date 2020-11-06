@@ -13,8 +13,8 @@ mesa lib32-mesa vulkan-intel lib32-vulkan-intel xf86-video-intel libva-intel-dri
 alsa-utils pulseaudio pulseaudio-alsa pulseaudio-ctl
 
 # Deamons, Utility programs
-# systemctl enable --now cpupower ananicy libvirtd && usermod -G libvirt -a "$(basename "$HOME")"
-cpupower gamemode ananicy reflector qemu libvirt ebtables virt-manager dnsmasq
+# systemctl enable --now cpupower ananicy 
+cpupower gamemode ananicy reflector
 
 # Desktop eXPrience
 bspwm sxhkd polybar picom python-pywal rofi feh tdrop-git
@@ -29,7 +29,17 @@ emacs neovim kitty ranger zathura cava mpv sxiv qutebrowser mpd ncmpcpp cordless
 figlet toilet cmatrix lolcat fortune-mod cowsay
 
 # Bloated software
-stretchly-bin firefox-developer-edition visual-studio-code-bin steam anbox-git anbox-image-gapps-rooted
+stretchly-bin firefox-developer-edition visual-studio-code-bin steam 
+
+# VMS
+# systemd services: systemctl enable --now anbox-container-manager(.service ?) libvirtd
+### Anbox (Android)
+## modules: modprobe binder_linux ashmem_linux
+## network: nmcli con add type bridge ifname anbox0 -- connection.id anbox-net ipv4.method shared ipv4.addresses 192.168.250.1/24
+anbox-image-gapps-rooted anbox-git android-tools
+### Virt-manager (libvirt + QEMU/KVM)
+## usermod -G libvirt -a "$(basename "$HOME")"
+qemu libvirt ebtables dnsmasq virt-manager
 
 # Fonts
 ttf-linux-libertine ttf-inconsolata noto-fonts ttf-font-awesome ttf-anonymous-pro ttf-dejavu ttf-liberation ttf-ms-fonts
