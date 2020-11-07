@@ -17,7 +17,7 @@ alsa-utils pulseaudio pulseaudio-alsa pulseaudio-ctl
 cpupower gamemode ananicy reflector
 
 # Desktop eXPrience
-bspwm sxhkd polybar picom python-pywal python-pywalfox rofi feh tdrop-git # pywalfox needs the firefox extension too
+bspwm sxhkd polybar picom python-pywal rofi feh tdrop-git
 
 # Terminals
 fish dash devour tmux
