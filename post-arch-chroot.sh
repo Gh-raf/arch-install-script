@@ -35,7 +35,7 @@ grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=Arch
 grub-mkconfig -o /boot/grub/grub.cfg
 
 # Add user
-useradd -m -g wheel -G audio,video,storage $username
+useradd -m -g wheel -G audio,video,storage,optical $username
 chpasswd <<< "$username:$username"
 chpasswd <<< "root:root"
 
