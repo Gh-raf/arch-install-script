@@ -33,16 +33,17 @@ figlet toilet cmatrix lolcat fortune-mod cowsay youtube-dl proxychains
 # Bloated software
 stretchly-bin firefox-developer-edition visual-studio-code-bin steam 
 
-# VMS
-# systemd services: systemctl enable --now anbox-container-manager libvirtd
-### Anbox (Android)
-## modules: modprobe binder_linux
-##          modprobe ashmem_linux
-## network: nmcli con add type bridge ifname anbox0 -- connection.id anbox-net ipv4.method shared ipv4.addresses 192.168.250.1/24
-anbox-image-gapps-rooted anbox-git android-tools
-### Virt-manager (libvirt + QEMU/KVM)
-## usermod -G libvirt -a "$(basename "$HOME")"
+# Vitual Machines
+# systemd services: systemctl enable --now libvirtd
+# Virt-manager (libvirt + QEMU/KVM)
+# usermod -G libvirt -a "$(basename "$HOME")"
 qemu libvirt ebtables dnsmasq virt-manager
 
 # Fonts
 ttf-linux-libertine ttf-inconsolata noto-fonts ttf-font-awesome ttf-anonymous-pro ttf-dejavu ttf-liberation ttf-ms-fonts
+
+# Anbox (Don't do that)
+# Modules: modprobe binder_linux && modprobe ashmem_linux (linux-zen)
+# Service: systemctl enable --now anbox-container-manager
+# Network: nmcli con add type bridge ifname anbox0 -- connection.id anbox-net ipv4.method shared ipv4.addresses 192.168.250.1/24
+# anbox-image-gapps-rooted-xposed anbox-git android-tools
