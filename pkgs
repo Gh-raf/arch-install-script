@@ -36,7 +36,8 @@ stretchly-bin firefox-developer-edition visual-studio-code-bin steam
 # VMS
 # systemd services: systemctl enable --now anbox-container-manager(.service ?) libvirtd
 ### Anbox (Android)
-## modules: modprobe binder_linux ashmem_linux
+## modules: modprobe binder_linux
+##          modprobe ashmem_linux
 ## network: nmcli con add type bridge ifname anbox0 -- connection.id anbox-net ipv4.method shared ipv4.addresses 192.168.250.1/24
 anbox-image-gapps-rooted anbox-git android-tools
 ### Virt-manager (libvirt + QEMU/KVM)
