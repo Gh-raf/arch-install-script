@@ -34,7 +34,7 @@ figlet toilet cmatrix lolcat fortune-mod cowsay youtube-dl proxychains
 stretchly-bin firefox-developer-edition visual-studio-code-bin steam 
 
 # VMS
-# systemd services: systemctl enable --now anbox-container-manager(.service ?) libvirtd
+# systemd services: systemctl enable --now anbox-container-manager libvirtd
 ### Anbox (Android)
 ## modules: modprobe binder_linux
 ##          modprobe ashmem_linux
