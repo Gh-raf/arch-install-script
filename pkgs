@@ -31,7 +31,10 @@ emacs neovim kitty ranger zathura cava mpv sxiv qutebrowser mpd ncmpcpp cordless
 figlet toilet cmatrix lolcat fortune-mod cowsay youtube-dl proxychains
 
 # Bloated software
-stretchly-bin firefox-developer-edition visual-studio-code-bin steam 
+stretchly-bin firefox-developer-edition visual-studio-code-bin steam
+
+# Programming
+intellij-idea-community-edition rustup
 
 # Vitual Machines
 # systemd services: systemctl enable --now libvirtd
