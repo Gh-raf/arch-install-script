@@ -38,9 +38,8 @@ stretchly-bin firefox-developer-edition visual-studio-code-bin steam
 intellij-idea-community-edition rustup
 
 # Vitual Machines
-# systemd services: systemctl enable --now libvirtd
-# Virt-manager (libvirt + QEMU/KVM)
-# usermod -G libvirt -a "$(basename "$HOME")"
+# Virt-manager (libvirt + QEMU/KVM) (maybe use VirtualManager with KVM?)
+# usermod -G libvirt -a "$(basename "$HOME")" && systemctl enable --now libvirtd
 qemu libvirt ebtables dnsmasq virt-manager
 
 # Fonts
