@@ -12,7 +12,7 @@ xf86-video-intel libva-intel-driver libva-utils # libva-vdpau-driver vdpauinfo
 
 # Sound Server
 # Tune volume: amixer alsamixer pulseaudio-ctl
-alsa-utils pulseaudio pulseaudio-alsa pulseaudio-ctl
+pulseaudio pulseaudio-alsa pulseaudio-ctl
 
 # Deamons, Utility programs
 # systemctl enable --now cpupower ananicy 
