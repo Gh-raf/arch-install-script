@@ -28,7 +28,7 @@ timedatectl set-ntp true
 
 # Create and Format the partitions
 parted $(x) mklabel gpt
-parted -s $(x) -- \
+parted -a optimal -s $(x) -- \
 	 mkpart boot fat32 		2048s $(dec $boot_end)B \
 	 set 1 boot on \
 	 mkpart swap linux-swap "$boot_end"B $(dec $swap_end)B  \
