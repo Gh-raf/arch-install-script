@@ -24,7 +24,7 @@ redshift
 python-pywal rofi feh tdrop-git
 
 # Terminals
-fish dash devour tmux
+fish dash devour tmux exa
 
 # Simple extensible minimalist software
 emacs neovim kitty ranger zathura cava mpv sxiv qutebrowser mpd ncmpcpp cordless-git neofetch neomutt
