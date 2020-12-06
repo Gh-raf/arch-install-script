@@ -12,7 +12,7 @@ xf86-video-intel libva-intel-driver libva-utils # libva-vdpau-driver vdpauinfo
 
 # Sound Server
 # Tune volume: amixer alsamixer pulseaudio-ctl
-pulseaudio pulseaudio-alsa pulseaudio-ctl
+alsa-utils pulseaudio pulseaudio-alsa pulseaudio-ctl
 
 # Deamons, Utility programs
 # systemctl enable --now cpupower ananicy 
@@ -24,7 +24,7 @@ redshift
 python-pywal rofi feh tdrop-git
 
 # Terminals
-fish dash devour tmux exa
+fish dash devour tmux starfish exa
 
 # Simple extensible minimalist software
 emacs neovim kitty ranger zathura cava mpv sxiv qutebrowser mpd ncmpcpp cordless-git neofetch neomutt
