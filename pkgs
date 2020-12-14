@@ -21,7 +21,7 @@ cpupower gamemode ananicy reflector
 # Desktop eXPrience
 bspwm sxhkd polybar picom
 redshift
-python-pywal rofi feh tdrop-git
+python-pywal rofi nitrogen tdrop-git
 
 # Terminals
 fish dash devour tmux starfish exa imagemagick
