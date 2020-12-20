@@ -1,6 +1,6 @@
 # X server
 # Run xdg-user-dirs-update once
-xorg-server xorg-xinit xorg-xinput xorg-xkill xdg-user-dirs xdo
+xorg-{server,xinit,xinput,xkill} xdg-user-dirs xdo
 
 # Drivers
 # Hardware Acceleration <https://wiki.archlinux.org/index.php/Hardware_video_acceleration>
@@ -11,44 +11,27 @@ mesa lib32-mesa vulkan-intel lib32-vulkan-intel # lib32 drivers for steam and wi
 xf86-video-intel libva-intel-driver libva-utils # libva-vdpau-driver vdpauinfo
 
 # Sound Server
-# Tune volume: amixer alsamixer pulseaudio-ctl
-alsa-utils pulseaudio pulseaudio-alsa pulseaudio-ctl
+# Tune volume: amixer alsamixer pulseaudio-ctl pavucontrol
+alsa-utils pulseaudio pulseaudio-alsa pulseaudio-ctl pavucontrol
 
 # Deamons, Utility programs
 # systemctl enable --now cpupower ananicy 
 cpupower gamemode ananicy reflector
 
-# Desktop eXPrience
-bspwm sxhkd picom-ibhagwan polybar
-redshift
+bspwm sxhkd picom-ibhagwan polybar redshift
 python-pywal rofi nitrogen tdrop-git
 
-# Terminals
 fish dash devour tmux starfish exa imagemagick
 
-# Simple extensible minimalist software
-emacs neovim kitty ranger zathura cava mpv sxiv qutebrowser mpd ncmpcpp cordless-git neofetch neomutt
+emacs neovim kitty ranger zathura cava mpv sxiv mpd ncmpcpp cordless-git neofetch neomutt
 
-# Skr3ptZ
-figlet toilet cmatrix lolcat fortune-mod cowsay youtube-dl proxychains wmname
+figlet toilet cmatrix lolcat fortune-mod cowsay
+youtube-dl proxychains wmname
+stretchly-bin visual-studio-code-bin steam
+qutebrowser firefox-developer-edition ungoogled-chromium
 
-# Bloated software
-stretchly-bin firefox-developer-edition visual-studio-code-bin steam
-
-# Programming
 # rustup toolchain install stable
 intellij-idea-community-edition rustup
 
-# Vitual Machines
-# Virt-manager (libvirt + QEMU/KVM) (maybe use VirtualManager with KVM?)
-# usermod -G libvirt -a "$(basename "$HOME")" && systemctl enable --now libvirtd
-qemu libvirt ebtables dnsmasq virt-manager
-
 # Fonts
 ttf-linux-libertine ttf-inconsolata noto-fonts ttf-font-awesome ttf-anonymous-pro ttf-dejavu ttf-liberation ttf-ms-fonts
-
-# Anbox (Don't do that)
-# Modules: modprobe binder_linux && modprobe ashmem_linux (linux-zen)
-# Service: systemctl enable --now anbox-container-manager
-# Network: nmcli con add type bridge ifname anbox0 -- connection.id anbox-net ipv4.method shared ipv4.addresses 192.168.250.1/24
-# anbox-image-gapps-rooted-xposed anbox-git android-tools
