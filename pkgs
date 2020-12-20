@@ -19,7 +19,7 @@ alsa-utils pulseaudio pulseaudio-alsa pulseaudio-ctl
 cpupower gamemode ananicy reflector
 
 # Desktop eXPrience
-bspwm sxhkd polybar picom
+bspwm sxhkd picom-ibhagwan polybar
 redshift
 python-pywal rofi nitrogen tdrop-git
 
