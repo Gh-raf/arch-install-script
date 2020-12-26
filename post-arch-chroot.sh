@@ -26,14 +26,11 @@ echo "
 ::1\t\tlocalhost
 127.0.1.1\t$hostname.localdomain\t$hostname" >> /etc/hosts
 
-# Install networkmanager, bootloader, microcode and git
-pacman -S --noconfirm networkmanager grub efibootmgr os-prober "$cpu_manufacturer"-ucode
-
-# Enable Internet for next session
-systemctl enable NetworkManager
+# Install bootloader, microcode and git
+pacman -S --noconfirm grub efibootmgr os-prober "$cpu_manufacturer"-ucode
 
 # Setup grub
-grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=Arch
+grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=Linux
 grub-mkconfig -o /boot/grub/grub.cfg
 
 # Add user
