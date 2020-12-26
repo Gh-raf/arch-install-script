@@ -15,7 +15,7 @@ pacman -Syy
 
 # Setup the Timezone, Localisation, Language, Keymap, Hostname, Hosts
 ln -sf /usr/share/zoneinfo/$zone /etc/localtime && hwclock --systohc
-sed -i -E 's/#[^\S\n]*'"$locale"/"$locale"/ /etc/locale.gen && locale-gen
+sed -i 's/#[^\S\n]*'"$locale"/"$locale"/ /etc/locale.gen && locale-gen
 echo LANG="${locale/ */}" > /etc/locale.conf
 echo KEYMAP=$keymap > /etc/vconsole.conf
 echo $hostname > /etc/hostname
