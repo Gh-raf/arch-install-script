@@ -33,7 +33,7 @@ parted -a optimal -s $blk_dev -- \
 	 mkpart boot fat32 		2048s $(dec $boot_end)B \
 	 set 1 boot on \
 	 mkpart swap linux-swap "$boot_end"B $(dec $swap_end)B  \
-	 mkpart root ext4 		"$swap_end"B $(dec $root_end)B \
+	 mkpart rootfs ext4 		"$swap_end"B $(dec $root_end)B \
 	 mkpart home ext4 		"$root_end"B -34s
 
 mkfs.fat -F32 "$blk_dev"1
