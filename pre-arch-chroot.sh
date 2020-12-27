@@ -24,9 +24,6 @@ boot_end=$(cal 2048 \* sctr_l + $(MiB_B $boot))
 swap_end=$(cal $boot_end + $(MiB_B $swap))
 root_end=$(cal $swap_end + $(MiB_B $root))
 
-# Sync sys clock
-timedatectl set-ntp true
-
 # Create and Format the partitions
 parted $blk_dev mklabel gpt
 parted -a optimal -s $blk_dev -- \
@@ -48,6 +45,6 @@ mkdir -p /mnt/boot && mount "$blk_dev"1 /mnt/boot
 mkdir /mnt/home && mount "$blk_dev"4 /mnt/home
 
 # Install Base System (tty) + man pages + text editor
-pacstrap /mnt base base-devel linux linux-firmware linux-zen man-db man-pages git
+basestrap /mnt base base-devel runit elogind-runit linux linux-zen linux-firmware man-db man-pages git
 genfstab -U /mnt >> /mnt/etc/fstab
-arch-chroot /mnt
+artix-chroot /mnt
