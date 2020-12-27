@@ -27,7 +27,7 @@ echo "
 127.0.1.1\t$hostname.localdomain\t$hostname" >> /etc/hosts
 
 # Install bootloader, microcode and git
-pacman -S --noconfirm grub efibootmgr os-prober "$cpu_manufacturer"-ucode dhcpcd
+pacman -S --noconfirm grub efibootmgr os-prober "$cpu_manufacturer"-ucode dhcpcd connman-runit connman-gtk git
 
 # Setup grub
 grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=Linux
