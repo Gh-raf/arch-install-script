@@ -22,8 +22,8 @@ bspwm sxhkd picom-ibhagwan polybar redshift
 python-pywal rofi nitrogen tdrop-git
 
 fish dash devour tmux starfish exa imagemagick
-ngrok
-emacs neovim kitty ranger zathura cava mpv sxiv mpd ncmpcpp cordless-git neofetch neomutt
+ngrok glances
+emacs neovim kitty ranger zathura cava mpv sxiv mpd ncmpcpp neofetch neomutt
 
 figlet toilet cmatrix lolcat fortune-mod cowsay
 youtube-dl proxychains wmname
