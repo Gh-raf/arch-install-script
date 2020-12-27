@@ -33,6 +33,8 @@ pacman -S --noconfirm grub efibootmgr os-prober "$cpu_manufacturer"-ucode dhcpcd
 grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=Linux
 grub-mkconfig -o /boot/grub/grub.cfg
 
+ln -s /etc/runit/sv/connmand /etc/runit/runsvdir/default
+
 # Add user
 useradd -m -g wheel -G audio,video,storage,optical $username
 chpasswd <<< "$username:$username"
