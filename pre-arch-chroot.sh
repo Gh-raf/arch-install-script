@@ -45,6 +45,6 @@ mkdir -p /mnt/boot && mount "$blk_dev"1 /mnt/boot
 mkdir /mnt/home && mount "$blk_dev"4 /mnt/home
 
 # Install Base System (tty) + man pages + text editor
-basestrap /mnt base base-devel runit elogind-runit linux linux-zen linux-firmware man-db man-pages git
+basestrap /mnt base base-devel runit elogind-runit linux linux-zen linux-firmware man-db man-pages
 genfstab -U /mnt >> /mnt/etc/fstab
 artix-chroot /mnt
