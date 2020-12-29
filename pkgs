@@ -20,11 +20,11 @@ cpupower gamemode ananicy reflector
 
 bspwm sxhkd picom-ibhagwan polybar redshift
 python-pywal rofi nitrogen wireshark-cli
-vscodium-bin hashcat okular inkscape
-qbittorrent krita kdenlive
-xournalpp obs-studio qbittorrent nmap
+vscodium-bin hashcat okular inkscape virtualbox
+qbittorrent krita kdenlive aircrack-ng
+xournalpp obs-studio qbittorrent nmap kodi dolphin
 
-fish dash devour tmux starfish exa flameshot
+fish dash tmux starfish exa flameshot
 ngrok glances
 emacs neovim kitty ranger zathura cava mpv sxiv mpd ncmpcpp neofetch neomutt
 
