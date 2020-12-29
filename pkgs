@@ -34,7 +34,7 @@ stretchly-bin steam
 qutebrowser firefox-developer-edition ungoogled-chromium
 
 # rustup toolchain install stable
-intellij-idea-community-edition rustup
+eclipse-java-bin rustup
 
 # Fonts
 ttf-linux-libertine ttf-inconsolata noto-fonts ttf-font-awesome ttf-anonymous-pro ttf-dejavu ttf-liberation ttf-ms-fonts
