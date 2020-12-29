@@ -19,15 +19,18 @@ alsa-utils pulseaudio pulseaudio-alsa pulseaudio-ctl pavucontrol
 cpupower gamemode ananicy reflector
 
 bspwm sxhkd picom-ibhagwan polybar redshift
-python-pywal rofi nitrogen tdrop-git
+python-pywal rofi nitrogen wireshark-cli
+vscodium-bin hashcat okular inkscape
+qbittorrent krita kdenlive
+xournalpp obs-studio qbittorrent nmap
 
-fish dash devour tmux starfish exa imagemagick
+fish dash devour tmux starfish exa flameshot
 ngrok glances
 emacs neovim kitty ranger zathura cava mpv sxiv mpd ncmpcpp neofetch neomutt
 
 figlet toilet cmatrix lolcat fortune-mod cowsay
 youtube-dl proxychains wmname
-stretchly-bin visual-studio-code-bin steam
+stretchly-bin steam
 qutebrowser firefox-developer-edition ungoogled-chromium
 
 # rustup toolchain install stable
