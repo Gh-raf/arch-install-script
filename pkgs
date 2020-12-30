@@ -18,23 +18,21 @@ alsa-utils pulseaudio pulseaudio-alsa pulseaudio-ctl pavucontrol
 # systemctl enable --now cpupower ananicy 
 cpupower gamemode ananicy reflector
 
-bspwm sxhkd picom-ibhagwan polybar redshift
-python-pywal rofi nitrogen wireshark-cli
-vscodium-bin hashcat okular inkscape virtualbox
-qbittorrent krita kdenlive aircrack-ng
-xournalpp obs-studio qbittorrent nmap kodi dolphin
+bspwm sxhkd picom-ibhagwan polybar
+aircrack-ng wireshark-cli hashcat nmap proxychains
+python-pywal rofi nitrogen redshift
 
-fish dash tmux starfish exa flameshot
-ngrok glances
-emacs neovim kitty ranger zathura cava mpv sxiv mpd ncmpcpp neofetch neomutt
+kitty fish dash tmux starfish exa glances wmname
+ranger zathura cava mpv sxiv mpd ncmpcpp emacs neovim neofetch neomutt youtube-dl
 
 figlet toilet cmatrix lolcat fortune-mod cowsay
-youtube-dl proxychains wmname
-stretchly-bin steam
-qutebrowser firefox-developer-edition ungoogled-chromium
+ 
+okular virtualbox xournalpp flameshot ngrok
+stretchly-bin steam firefox-developer-edition ungoogled-chromium eclipse-java-bin
+kdenlive qbittorrent krita dolphin inkscape vscodium-bin obs-studio kodi
 
 # rustup toolchain install stable
-eclipse-java-bin rustup
+rustup
 
 # Fonts
 ttf-linux-libertine ttf-inconsolata noto-fonts ttf-font-awesome ttf-anonymous-pro ttf-dejavu ttf-liberation ttf-ms-fonts
