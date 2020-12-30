@@ -15,8 +15,8 @@ xf86-video-intel libva-intel-driver libva-utils # libva-vdpau-driver vdpauinfo
 alsa-utils pulseaudio pulseaudio-alsa pulseaudio-ctl pavucontrol
 
 # Deamons, Utility programs
-# systemctl enable --now cpupower ananicy 
-cpupower gamemode ananicy reflector
+# systemctl enable --now cpupower ananicy
+cpupower gamemode ananicy reflector cpulimit nohang-git
 
 bspwm sxhkd picom-ibhagwan polybar
 aircrack-ng wireshark-cli hashcat nmap proxychains
