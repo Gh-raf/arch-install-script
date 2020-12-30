@@ -1,6 +1,6 @@
 # X server
 # Run xdg-user-dirs-update once
-xorg-{server,xinit,xinput,xkill} xdg-user-dirs xdo
+xorg-{server,xinit,xinput,xkill} xdg-user-dirs xdo lightdm
 
 # Drivers
 # Hardware Acceleration <https://wiki.archlinux.org/index.php/Hardware_video_acceleration>
