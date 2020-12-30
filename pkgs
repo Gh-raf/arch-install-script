@@ -29,7 +29,7 @@ figlet toilet cmatrix lolcat fortune-mod cowsay
  
 okular virtualbox xournalpp flameshot ngrok
 stretchly-bin steam firefox-developer-edition ungoogled-chromium eclipse-java-bin
-kdenlive qbittorrent krita dolphin inkscape vscodium-bin obs-studio kodi
+kdenlive qbittorrent krita dolphin inkscape vscodium-bin obs-studio kodi lightcord-bin
 
 # rustup toolchain install stable
 rustup
