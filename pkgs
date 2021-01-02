@@ -12,27 +12,43 @@ xf86-video-intel libva-intel-driver libva-utils # libva-vdpau-driver vdpauinfo
 
 # Sound Server
 # Tune volume: amixer alsamixer pulseaudio-ctl pavucontrol
-alsa-utils pulseaudio pulseaudio-alsa pulseaudio-ctl pavucontrol
+pipewire pipewire-alsa pipewire-pulse pipewire-jack
+# alsa-utils pulseaudio pulseaudio-alsa pulseaudio-ctl pavucontrol
 
-# Deamons, Utility programs
+# Deamons
 # systemctl enable --now cpupower ananicy
 cpupower gamemode ananicy reflector cpulimit nohang-git
 
-bspwm sxhkd picom-ibhagwan polybar
-aircrack-ng wireshark-cli hashcat nmap proxychains
-python-pywal rofi nitrogen redshift
+# Desktop
+bspwm sxhkd picom-ibhagwan polybar python-pywal rofi nitrogen
+# ... Experience
+kitty fish dash tmux starfish exa glances wmname redshift
 
-kitty fish dash tmux starfish exa glances wmname
-ranger zathura cava mpv sxiv mpd ncmpcpp emacs neovim neofetch neomutt youtube-dl
-element-desktop ardour
-figlet toilet cmatrix lolcat fortune-mod cowsay
- 
-okular virtualbox xournalpp flameshot ngrok
-stretchly-bin steam firefox-developer-edition ungoogled-chromium eclipse-java-bin
-kdenlive qbittorrent krita dolphin inkscape vscodium-bin obs-studio kodi lightcord-bin
+# Security
+aircrack-ng wireshark-cli hashcat nmap proxychains
+
+# Scripts
+youtube-dl figlet toilet cmatrix lolcat fortune-mod cowsay
+
+# Applications
+ranger zathura cava mpv sxiv mpd ncmpcpp emacs neovim neofetch neomutt stretchly-bin okular virtualbox xournalpp
+
+# Browsers
+firefox-developer-edition ungoogled-chromium
+
+# Video/Audio
+kdenlive inkscape obs-studio ardour flameshot
+
+# Programming
+eclipse-java-bin krita dolphin  vscodium-bin ngrok rustup
+
+# Communication
+lightcord-bin element-desktop qbittorrent
+
+# Entertainment
+steam kodi
 
 # rustup toolchain install stable
-rustup
 
 # Fonts
 ttf-linux-libertine ttf-inconsolata noto-fonts ttf-font-awesome ttf-anonymous-pro ttf-dejavu ttf-liberation ttf-ms-fonts
