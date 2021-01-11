@@ -1,5 +1,5 @@
 # X server
-xorg-{server,xinit,xinput,xkill} xdg-user-dirs xdo lightdm
+xorg-server xorg-xinit xorg-xinput xorg-xkill xdg-user-dirs xdo lightdm
 
 # Drivers
 # Hardware Acceleration <https://wiki.archlinux.org/index.php/Hardware_video_acceleration>
@@ -14,7 +14,7 @@ libva-intel-driver
 ####                      ####
 
 # Sound Server
-pipewire pipewire-alsa pipewire-pulse pipewire-jack # (or) alsa-utils pulseaudio pulseaudio-alsa jack2 pulseaudio-ctl pavucontrol
+pipewire pipewire-alsa pipewire-pulse pipewire-jack
 
 # Deamons
 cpupower gamemode ananicy reflector cpulimit nohang-git
@@ -28,14 +28,11 @@ kitty fish dash tmux starfish exa glances wmname redshift
 aircrack-ng wireshark-cli hashcat nmap proxychains
 
 # Scripts
-youtube-dl figlet toilet cmatrix lolcat fortune-mod cowsay speedtest-cli tdrop-git
+youtube-dl figlet toilet cmatrix lolcat fortune-mod cowsay speedtest-cli tdrop-git starship
 
 # Applications
 ranger zathura cava mpv sxiv mpd ncmpcpp emacs neovim neofetch neomutt stretchly-bin
-okular virtualbox xournalpp libreoffice-fresh texlive-most r 
-
-# Browsers
-firefox-developer-edition ungoogled-chromium
+okular virtualbox xournalpp libreoffice-fresh r ungoogled-chromium-appimage
 
 # Video/Audio
 kdenlive inkscape obs-studio ardour flameshot gimp
