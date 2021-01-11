@@ -5,7 +5,6 @@ xorg-server xorg-xinit xorg-xinput xorg-xkill xdg-user-dirs xdo lightdm
 # Hardware Acceleration <https://wiki.archlinux.org/index.php/Hardware_video_acceleration>
 # vainfo (libva-utils): VAEntrypointVLD / VAEntrypointEncSlice => able to decode / encode format
 # vdpauinfo: No error message => Great
-
 #### SPECIFIC TO MY SETUP ####
 # Intel Free Drivers
 mesa lib32-mesa xf86-video-intel vulkan-intel lib32-vulkan-intel
@@ -17,7 +16,7 @@ libva-intel-driver
 pipewire pipewire-alsa pipewire-pulse pipewire-jack
 
 # Deamons
-cpupower gamemode ananicy reflector cpulimit nohang-git
+cpupower ananicy reflector cpulimit nohang-git
 
 # Desktop
 bspwm sxhkd picom-ibhagwan polybar python-pywal rofi nitrogen
@@ -46,9 +45,7 @@ lightcord-bin element-desktop qbittorrent
 # Entertainment
 steam kodi
 
-# amixer alsamixer pulseaudio-ctl pavucontrol
-# systemctl enable --now cpupower ananicy
-# xdg-user-dirs-update
+# enable runit services cpupower ananicy
 # rustup toolchain install stable
 
 # Fonts
