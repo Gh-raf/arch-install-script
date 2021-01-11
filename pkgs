@@ -27,7 +27,7 @@ kitty fish dash tmux starfish exa glances wmname redshift
 aircrack-ng wireshark-cli hashcat nmap proxychains
 
 # Scripts
-youtube-dl figlet toilet cmatrix lolcat fortune-mod cowsay speedtest-cli tdrop-git starship-bin
+youtube-dl figlet toilet cmatrix lolcat fortune-mod cowsay speedtest-cli tdrop-git
 
 # Applications
 ranger zathura cava mpv sxiv mpd ncmpcpp emacs neovim neofetch neomutt stretchly-bin
