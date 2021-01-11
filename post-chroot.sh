@@ -15,16 +15,21 @@ pacman -Syy
 
 # Setup the Timezone, Localisation, Language, Keymap, Hostname, Hosts
 ln -sf /usr/share/zoneinfo/$zone /etc/localtime && hwclock --systohc
-sed -i 's/#[^\S\n]*'"$locale"/"$locale"/ /etc/locale.gen && locale-gen
-echo "
-export LANG=\"${locale/ */}\"
-export LC_COLLATE=\"C\"" > /etc/locale.conf
+echo $locale >> /etc/locale.gen && locale-gen
+
+cat << EOF >> /etc/locale.conf
+export LANG="${locale/ */}"
+export LC_COLLATE="C"
+EOF
+
 echo KEYMAP=$keymap > /etc/vconsole.conf
 echo $hostname > /etc/hostname
-echo "
-127.0.0.1\tlocalhost
-::1\t\tlocalhost
-127.0.1.1\t$hostname.localdomain\t$hostname" >> /etc/hosts
+
+cat << EOF >> /etc/hosts
+127.0.0.1	localhost
+::1		localhost
+127.0.1.1	$hostname.localdomain	$hostname
+EOF
 
 # Install bootloader, microcode and git
 pacman -S --noconfirm grub efibootmgr os-prober "$cpu_manufacturer"-ucode dhcpcd connman-runit connman-gtk git
@@ -41,10 +46,11 @@ chpasswd <<< "$username:$username"
 chpasswd <<< "root:root"
 
 # Give wheel group sudo perms
-sed -i -E 's/\s*#\s*(%wheel ALL=\(ALL\) NOPASSWD: ALL)/\1/' /etc/sudoers
+# Enable multilib and lib32 repo
 
-# Enable multilib repo
-sed -i -E 's/\s*#\s*(\[multilib\])/\1\nInclude = \/etc\/pacman\.d\/mirrorlist/' /etc/pacman.conf
+##################################
+####    Pkgs-installation     ####
+##################################
 
 # Install yay
 sudo -u $username mkdir /home/$username/dev && cd /home/$username/dev 
@@ -52,4 +58,4 @@ sudo -u $username git clone https://aur.archlinux.org/yay.git && cd yay
 yes | sudo -Su $username makepkg -si && rm -rf ../yay
 
 # Install packages at ./packages
-sudo -u $username yay -S --noconfirm --nopgpfetch $(sed -e 's/#.*$//' "$(cd "$(dirname $0)" && pwd)/pkgs")
+sudo -u $username yay -S --noconfirm --nopgpfetch $(sed -E -e 's/^[[:blank:]]*([^[:blank:]]([[:blank:]][^[:blank:]])*)*[[:blank:]]*#.*$/\1/g' "$(cd "$(dirname $0)" && pwd)/pkgs")
