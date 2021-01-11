@@ -31,7 +31,7 @@ aircrack-ng wireshark-cli hashcat nmap proxychains
 youtube-dl figlet toilet cmatrix lolcat fortune-mod cowsay speedtest-cli tdrop-git
 
 # Applications
-ranger zathura cava mpv sxiv mpd ncmpcpp emacs neovim neofetch neomutt stretchly-bin
+lf zathura cava mpv sxiv mpd ncmpcpp emacs neovim neofetch neomutt stretchly-bin
 okular virtualbox xournalpp libreoffice-fresh r ungoogled-chromium-appimage
 
 # Video/Audio
