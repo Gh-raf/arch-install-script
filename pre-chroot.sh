@@ -45,7 +45,7 @@ mnt "$blk_dev"3 /mnt
 mnt "$blk_dev"1 /mnt/boot
 mnt "$blk_dev"4 /mnt/home
 
-# Install Base System (tty) + man pages + text editor
+# Install Base System
 basestrap /mnt base base-devel runit elogind-runit linux linux-zen linux-firmware man-db man-pages
-genfstab -U /mnt >> /mnt/etc/fstab || echo No \`genfstab\`, pleaze fill manually your \`/etc/fstab\` and \`artix-chroot /mnt\`
+fstabgen -U /mnt >> /mnt/etc/fstab
 artix-chroot /mnt
