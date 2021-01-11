@@ -17,7 +17,7 @@ libva-intel-driver
 pipewire pipewire-alsa pipewire-pulse pipewire-jack
 
 # Deamons
-cpupower ananicy reflector cpulimit nohang-giE can be specified  as  an  integer t
+cpupower ananicy reflector cpulimit nohang-git
 
 # Desktop
 bspwm sxhkd picom-ibhagwan polybar python-pywal rofi nitrogen
