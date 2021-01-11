@@ -13,10 +13,11 @@ libva-intel-driver
 ####                      ####
 
 # Sound Server
+# uncmnt exec /usr/bin/pipewire-pulse in /etc/pipewire/pipewire.conf
 pipewire pipewire-alsa pipewire-pulse pipewire-jack
 
 # Deamons
-cpupower ananicy reflector cpulimit nohang-git
+cpupower ananicy reflector cpulimit nohang-giE can be specified  as  an  integer t
 
 # Desktop
 bspwm sxhkd picom-ibhagwan polybar python-pywal rofi nitrogen
