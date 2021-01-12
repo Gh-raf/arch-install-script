@@ -17,7 +17,7 @@ libva-intel-driver
 pipewire pipewire-alsa pipewire-pulse pipewire-jack
 
 # Deamons
-cpupower ananicy reflector cpulimit nohang-git
+cpupower ananicy-git reflector cpulimit nohang-git
 
 # Desktop
 bspwm sxhkd picom-ibhagwan-git polybar python-pywal rofi nitrogen
