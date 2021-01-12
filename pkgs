@@ -20,9 +20,9 @@ pipewire pipewire-alsa pipewire-pulse pipewire-jack
 cpupower ananicy reflector cpulimit nohang-git
 
 # Desktop
-bspwm sxhkd picom-ibhagwan polybar python-pywal rofi nitrogen
+bspwm sxhkd picom-ibhagwan-git polybar python-pywal rofi nitrogen
 # ... Experience
-kitty fish dash tmux starfish exa glances gotop wmname redshift
+kitty fish dash tmux starship exa glances gotop wmname redshift
 
 # Security
 aircrack-ng wireshark-cli hashcat nmap proxychains
