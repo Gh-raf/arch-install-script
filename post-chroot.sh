@@ -18,8 +18,8 @@ ln -sf /usr/share/zoneinfo/$zone /etc/localtime && hwclock --systohc
 echo $locale >> /etc/locale.gen && locale-gen
 
 cat << EOF >> /etc/locale.conf
-export LANG="${locale/ */}"
-export LC_COLLATE="C"
+LANG="${locale/ */}"
+LC_COLLATE="C"
 EOF
 
 echo KEYMAP=$keymap > /etc/vconsole.conf
