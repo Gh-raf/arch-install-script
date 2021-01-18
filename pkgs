@@ -21,6 +21,7 @@ cpupower ananicy-git cpulimit nohang-git # irqbalance
 
 # Desktop
 bspwm sxhkd picom-ibhagwan-git polybar python-pywal rofi nitrogen
+libreoffice-fresh
 # ... Experience
 kitty fish dash tmux starship exa glances gotop wmname redshift
 
@@ -30,22 +31,29 @@ aircrack-ng wireshark-cli hashcat nmap proxychains
 # Scripts
 youtube-dl figlet toilet cmatrix lolcat fortune-mod cowsay speedtest-cli tdrop-git reflector
 
+# Media
+mpv mpd ncmpcpp cava
+
 # Applications
-lf zathura cava mpv sxiv mpd ncmpcpp emacs neovim neofetch neomutt stretchly-bin
-okular virtualbox xournalpp libreoffice-fresh r ungoogled-chromium-appimage
-keepassxc tutanota-desktop-bin
+lf zathura sxiv emacs neovim neofetch neomutt stretchly-bin okular xournalpp keepassxc
+
+# Browsers
+ungoogled-chromium-appimage librewolf-bin
 
 # Video/Audio
 kdenlive inkscape obs-studio ardour flameshot gimp
 
 # Programming
-eclipse-java-bin krita dolphin vscodium-bin ngrok rustup
+eclipse-java-bin krita dolphin vscodium-bin ngrok rustup r
 
 # Communication
-lightcord-bin element-desktop qbittorrent
+lightcord-bin element-desktop qbittorrent tutanota-desktop-bin
 
 # Entertainment
 steam kodi
+
+# Virtualization
+fuze2 virtualbox
 
 # enable runit services cpupower ananicy
 # rustup toolchain install stable
