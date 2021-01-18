@@ -1,10 +1,10 @@
 set -e
 
-sdx+=sda
-sctr_l+=$(cat /sys/block/$sdx/queue/hw_sector_size)
-boot+=512
-swap+=8192
-root+=30720
+sdx=sda
+sctr_l=$(cat /sys/block/$sdx/queue/hw_sector_size)
+boot=512
+swap=8192
+root=30720
 
 blk_dev=/dev/"$sdx"
 
