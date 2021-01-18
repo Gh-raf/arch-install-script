@@ -1,11 +1,11 @@
 set -e
 
-hostname+='FlowBox'
-username+='adderall'
-keymap+='colemak'
-zone+='Europe/London'
-locale+='en_GB.UTF-8 UTF-8'
-cpu_manufacturer+='intel' # intel/amd
+hostname='FlowBox'
+username='adderall'
+keymap='colemak'
+zone='Europe/London'
+locale='en_GB.UTF-8 UTF-8'
+cpu_manufacturer='intel' # intel/amd
 
 ##################################
 ####    Post-installation     ####
