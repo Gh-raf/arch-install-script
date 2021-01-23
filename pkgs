@@ -35,7 +35,7 @@ youtube-dl figlet toilet cmatrix lolcat fortune-mod cowsay speedtest-cli tdrop-g
 mpv mpd ncmpcpp cava
 
 # Applications
-lf zathura sxiv emacs neovim neofetch neomutt stretchly-bin okular xournalpp keepassxc dolphin
+lf zathura sxiv emacs neovim-nightly-bin neofetch neomutt stretchly-bin okular xournalpp keepassxc dolphin testdisk
 
 # Browsers
 ungoogled-chromium-appimage librewolf-bin
