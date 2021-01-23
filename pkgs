@@ -44,7 +44,7 @@ ungoogled-chromium-appimage librewolf-bin
 kdenlive inkscape obs-studio ardour flameshot gimp krita
 
 # Programming
-eclipse-java-bin eclipse-cpp vscodium-bin ngrok rustup r kite
+eclipse-java-bin eclipse-cpp vscodium-bin ngrok rustup r kite recaf
 
 # Communication
 lightcord-bin element-desktop qbittorrent tutanota-desktop-bin
