@@ -47,7 +47,7 @@ kdenlive inkscape obs-studio ardour flameshot gimp krita
 eclipse-java-bin eclipse-cpp vscodium-bin ngrok rustup r kite recaf
 
 # Communication
-lightcord-bin element-desktop qbittorrent tutanota-desktop-bin
+ripcord element-desktop qbittorrent tutanota-desktop-bin cordless-bin
 
 # Entertainment
 steam kodi
