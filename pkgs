@@ -23,7 +23,7 @@ cpupower ananicy-git cpulimit nohang-git # irqbalance
 bspwm sxhkd picom-ibhagwan-git polybar python-pywal rofi nitrogen
 libreoffice-fresh tldr
 # ... Experience
-kitty fish dash tmux glances gotop wmname redshift
+kitty fish dash tmux glances gotop wmname redshift syncthing
 
 # Rust replacements
 ripgrep exa bat starship fd procs
