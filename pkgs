@@ -21,9 +21,12 @@ cpupower ananicy-git cpulimit nohang-git # irqbalance
 
 # Desktop
 bspwm sxhkd picom-ibhagwan-git polybar python-pywal rofi nitrogen
-libreoffice-fresh
+libreoffice-fresh tldr
 # ... Experience
-kitty fish dash tmux starship exa glances gotop wmname redshift bat
+kitty fish dash tmux glances gotop wmname redshift
+
+# Rust replacements
+ripgrep exa bat starship fd
 
 # Security
 aircrack-ng wireshark-cli hashcat nmap proxychains
