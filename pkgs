@@ -17,8 +17,12 @@ libva-intel-driver
 # uncmnt exec /usr/bin/pipewire-pulse in /etc/pipewire/pipewire.conf
 pipewire pipewire-alsa pipewire-pulse pipewire-jack
 
-# Performance, most are broken (not runit compatible)
-cpupower ananicy-git cpulimit nohang-git irqbalance
+# Performance deamons
+nohang-git irqbalance
+# openrc compatible
+cpupower
+# runit compatible
+ananicy-git 
 
 # Desktop
 bspwm sxhkd picom-ibhagwan-git polybar python-pywal rofi nitrogen tldr
@@ -33,7 +37,7 @@ ripgrep exa bat starship fd procs
 proxychains onionshare openvpn openvpn-update-resolv-conf-git dnscrypt-proxy keepassxc
 
 # Utulity
-rsync tdrop-git speedtest-cli reflector syncthing
+rsync tdrop-git speedtest-cli reflector syncthing cpulimit
 
 # Hacking
 aircrack-ng wireshark-cli hashcat nmap
