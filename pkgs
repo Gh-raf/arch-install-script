@@ -29,7 +29,7 @@ kitty fish dash tmux glances gotop wmname redshift syncthing
 ripgrep exa bat starship fd procs
 
 # Security
-aircrack-ng wireshark-cli hashcat nmap proxychains onionshare
+aircrack-ng wireshark-cli hashcat nmap proxychains onionshare openvpn-update-resolv-conf-git
 
 # Scripts
 youtube-dl figlet toilet cmatrix lolcat fortune-mod cowsay speedtest-cli tdrop-git reflector rsync
