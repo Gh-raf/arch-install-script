@@ -18,11 +18,10 @@ libva-intel-driver
 pipewire pipewire-alsa pipewire-pulse pipewire-jack
 
 # Performance deamons
-nohang-git irqbalance
-# openrc compatible
-cpupower
-# runit compatible
-ananicy-git 
+irqbalance # (systemd [as hard dep])
+nohang-git # (systemd)
+cpupower # (openrc + systemd)
+ananicy-git # (runit + openrc + systemd)
 
 # Desktop
 bspwm sxhkd picom-ibhagwan-git polybar python-pywal rofi nitrogen tldr
