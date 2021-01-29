@@ -5,6 +5,7 @@ xorg-server xorg-xinit xorg-xinput xorg-xkill xdg-user-dirs xdo lightdm
 # Hardware Acceleration <https://wiki.archlinux.org/index.php/Hardware_video_acceleration>
 # vainfo (libva-utils): VAEntrypointVLD / VAEntrypointEncSlice => able to decode / encode format
 # vdpauinfo: No error message => Great
+
 #### SPECIFIC TO MY SETUP ####
 # Intel Free Drivers
 mesa lib32-mesa xf86-video-intel vulkan-intel lib32-vulkan-intel
@@ -16,32 +17,38 @@ libva-intel-driver
 # uncmnt exec /usr/bin/pipewire-pulse in /etc/pipewire/pipewire.conf
 pipewire pipewire-alsa pipewire-pulse pipewire-jack
 
-# Performance, most are broken (cpupower) (not runit compatible)
-cpupower ananicy-git cpulimit nohang-git # irqbalance
+# Performance, most are broken (not runit compatible)
+cpupower ananicy-git cpulimit nohang-git irqbalance
 
 # Desktop
-bspwm sxhkd picom-ibhagwan-git polybar python-pywal rofi nitrogen
-libreoffice-fresh tldr
-# ... Experience
-kitty fish dash tmux glances gotop wmname redshift syncthing
+bspwm sxhkd picom-ibhagwan-git polybar python-pywal rofi nitrogen tldr
+
+# Terminal
+kitty fish tmux dash
 
 # Rust replacements
 ripgrep exa bat starship fd procs
 
 # Security
-aircrack-ng wireshark-cli hashcat nmap proxychains onionshare openvpn-update-resolv-conf-git
+proxychains onionshare openvpn openvpn-update-resolv-conf-git dnscrypt-proxy keepassxc
+
+# Utulity
+rsync tdrop-git speedtest-cli reflector syncthing
+
+# Hacking
+aircrack-ng wireshark-cli hashcat nmap
 
 # Scripts
-youtube-dl figlet toilet cmatrix lolcat fortune-mod cowsay speedtest-cli tdrop-git reflector rsync
+youtube-dl figlet toilet cmatrix lolcat fortune-mod cowsay neofetch wmname
 
 # Media
-mpv mpd ncmpcpp cava
+mpv mpd ncmpcpp cava zathura sxiv 
 
 # Applications
-lf zathura sxiv emacs neovim-nightly-bin neofetch neomutt stretchly-bin okular xournalpp keepassxc dolphin screenkey
+lf neomutt stretchly-bin okular xournalpp dolphin screenkey redshift libreoffice-fresh
 
 # Maintainance
-testdisk
+testdisk glances gotop
 
 # Browsers
 ungoogled-chromium-appimage librewolf-bin
@@ -50,7 +57,7 @@ ungoogled-chromium-appimage librewolf-bin
 kdenlive inkscape obs-studio ardour flameshot gimp krita
 
 # Programming
-eclipse-java-bin eclipse-cpp vscodium-bin ngrok rustup r kite recaf
+eclipse-java-bin eclipse-cpp vscodium-bin ngrok rustup r kite recaf emacs neovim-nightly-bin
 
 # Communication
 ripcord element-desktop qbittorrent tutanota-desktop-bin signal-desktop aether-bin
@@ -58,7 +65,7 @@ ripcord element-desktop qbittorrent tutanota-desktop-bin signal-desktop aether-b
 # Entertainment
 steam kodi
 
-# Virtualization
+# Virtualization: vitualbox or vmware ?
 fuze2 virtualbox
 
 # enable services cpupower ananicy nohang irqbalance
