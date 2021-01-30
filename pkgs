@@ -27,6 +27,9 @@ ananicy-git # (runit + openrc + systemd)
 # Desktop
 bspwm sxhkd picom-ibhagwan-git polybar python-pywal rofi nitrogen tldr
 
+# Fun
+python-gtts
+
 # Terminal
 kitty fish tmux dash
 
