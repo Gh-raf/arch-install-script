@@ -40,7 +40,7 @@ ripgrep exa bat starship fd procs
 # Security
 proxychains onionshare openvpn openvpn-update-resolv-conf-git dnscrypt-proxy keepassxc
 
-# Utulity
+# Utility
 rsync tdrop-git speedtest-cli reflector syncthing cpulimit
 
 # Hacking
