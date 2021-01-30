@@ -47,7 +47,7 @@ rsync tdrop-git speedtest-cli reflector syncthing cpulimit
 aircrack-ng wireshark-cli hashcat nmap
 
 # Scripts
-youtube-dl figlet toilet cmatrix lolcat fortune-mod cowsay neofetch wmname
+youtube-dl figlet toilet cmatrix lolcat fortune-mod cowsay neofetch wmname xwinwrap-git
 
 # Media
 mpv mpd ncmpcpp cava zathura sxiv 
