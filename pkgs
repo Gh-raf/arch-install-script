@@ -38,7 +38,8 @@ kitty fish tmux dash
 ripgrep exa bat starship fd procs
 
 # Security
-proxychains onionshare openvpn openvpn-update-resolv-conf-git dnscrypt-proxy keepassxc
+# connmanctl config ethernet_6451063bef05_cable nameservers 1.1.1.1 45.90.28.50 45.90.30.50
+proxychains onionshare openvpn dnscrypt-proxy keepassxc #openvpn-update-resolv-conf-git 
 
 # Utility
 rsync tdrop-git speedtest-cli reflector syncthing cpulimit
