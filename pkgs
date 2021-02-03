@@ -16,7 +16,7 @@ libva-intel-driver
 # Sound Server
 # uncmnt exec /usr/bin/pipewire-pulse in /etc/pipewire/pipewire.conf
 # add user to realtime group
-pipewire pipewire-alsa pipewire-pulse pipewire-jack realtime-privileges
+pipewire pipewire-pulse pipewire-jack realtime-privileges #pipewire-alsa
 
 # Performance deamons
 irqbalance # (systemd [as hard dep])
