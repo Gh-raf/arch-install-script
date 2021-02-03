@@ -48,4 +48,4 @@ mnt "$blk_dev"4 /mnt/home
 # Install Base System
 basestrap /mnt base base-devel runit elogind-runit linux linux-zen linux-firmware man-db man-pages
 fstabgen -U /mnt >> /mnt/etc/fstab
-artix-chroot /mnt
+artix-chroot /mnt /bin/bash post-chroot.sh
