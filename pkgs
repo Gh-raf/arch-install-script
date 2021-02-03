@@ -71,6 +71,9 @@ eclipse-java-bin eclipse-cpp vscodium-bin ngrok rustup r kite recaf emacs neovim
 # Communication
 ripcord element-desktop qbittorrent tutanota-desktop-bin signal-desktop aether-bin
 
+# Accessibility
+onboard
+
 # Entertainment
 steam kodi
 
