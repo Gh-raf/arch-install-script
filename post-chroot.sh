@@ -58,4 +58,4 @@ sudo -u $username git clone https://aur.archlinux.org/yay.git && cd yay
 yes | sudo -Su $username makepkg -si && rm -rf ../yay
 
 # Install packages at ./packages
-sudo -u $username yay -S --noconfirm --nopgpfetch $(sed -E -e 's/^\s*//' -e 's/(\s*|#.*)$//' -e 's/\s/\n/g' -e '/^$/d' $(dirname $0)/pkgs)
+sudo -u $username yay -S --noconfirm --nopgpfetch $(sed -E -e 's/^\s*//' -e 's/(\s*|#.*)$//' -e 's/\s/\n/g' -e '/^$/d' pkgs)
