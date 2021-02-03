@@ -18,7 +18,8 @@ mnt () { mkdir -p $2 && mount $1 $2; }
 ##################################
 
 # Exit if boot mode isn't UEFI
-[ -d /sys/firmware/efi ] || (echo 'Non-UEFI boot modes aren'\''t supported! Aborting...' && sleep 5 && exit)
+[ -d /sys/firmware/efi ] || (printf 'Non-UEFI boot modes aren'\''t supported! Aborting' && \
+				sleep 1 && printf . && sleep 1 && printf . && sleep 1 && echo .  && exit)
 
 # Calculate disk space for each partition
 boot_end=$(cal 2048 \* sctr_l + $(MiB_B $boot))
