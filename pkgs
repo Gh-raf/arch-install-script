@@ -78,7 +78,7 @@ onboard
 steam kodi
 
 # Virtualization: vitualbox or vmware ?
-fuze2 virtualbox
+fuse2 virtualbox
 
 # enable services cpupower ananicy nohang irqbalance
 # rustup toolchain install stable
