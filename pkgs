@@ -19,7 +19,7 @@ libva-intel-driver
 pipewire pipewire-pulse pipewire-jack realtime-privileges #pipewire-alsa
 
 # Performance deamons
-irqbalance # (systemd [as hard dep])
+#irqbalance # (systemd [as hard dep])
 nohang-git # (systemd)
 cpupower # (openrc + systemd) this deamon does nothing but sets default config on startup
 ananicy-git # (runit + openrc + systemd)
@@ -35,7 +35,7 @@ svox-pico-bin
 kitty fish tmux dash
 
 # Rust replacements
-ripgrep exa bat starship fd procs
+ripgrep exa bat starship fd procs fzf
 
 # Security
 # connmanctl config ethernet_6451063bef05_cable nameservers 1.1.1.1 45.90.28.50 45.90.30.50
