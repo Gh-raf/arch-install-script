@@ -136,7 +136,6 @@ yes | sudo -Su $username makepkg -si && rm -rf ../yay
 bl='[[:blank:]]'
 nbl='[^[:blank:] && ^#]'
 #======== Additional packages ========#
-
 read -r -p 'Do you want to enable additional pacman repositories (Y/n)? ' ans
 [[ -z $ans || $ans = Y || $ans = y ]] && nvim /etc/pacman.conf
 
