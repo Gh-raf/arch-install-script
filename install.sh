@@ -1,3 +1,5 @@
+#! /bin/bash
+
 set -e
 
 # Exit if boot mode isn't UEFI
