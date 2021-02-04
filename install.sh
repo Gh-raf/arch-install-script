@@ -139,8 +139,8 @@ nbl='[^[:blank:] && ^#]'
 read -r -p 'Do you want to enable additional pacman repositories (Y/n)? ' ans
 [[ -z $ans || $ans = Y || $ans = y ]] && nvim /etc/pacman.conf
 
-sudo -u $username yay -S --noconfirm --nopgpfetch \
-    $(sed -E -e 's/^'$bl'*('$nbl'+('$bl$nbl')*)*'$bl'*#.*$/\1/g' -e '/^$/d' pkgs)
+sudo -u $username yay -S --noconfirm \
+    $(sed -E -e 's/^('$nbl'+('$bl'+'$nbl'+)*)*'$bl'*#.*$/\1/g' -e '/^$/d' pkgs)
 
 EOF
 
