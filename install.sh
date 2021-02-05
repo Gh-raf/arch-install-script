@@ -33,7 +33,6 @@ locale=$(cat /etc/locale.gen | grep -E '^#[[:alnum:]]' | sed 's/#//g' | fzf)
 read -r -p 'Cpu manufacturer (intel/amd): ' cpu_manufacturer
 
 read -r -p 'Block device identifier (sda): ' sdx
-read -r -p 'Boot partition size (512): ' boot
 read -r -p 'Root partition size (30720): ' root
 
 # Set blank variables to default values
