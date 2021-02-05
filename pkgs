@@ -3,8 +3,6 @@ xorg-server xorg-xinit xorg-xinput xorg-xkill xdg-user-dirs xdo lightdm
 
 # Drivers
 # Hardware Acceleration <https://wiki.archlinux.org/index.php/Hardware_video_acceleration>
-# vainfo (libva-utils): VAEntrypointVLD / VAEntrypointEncSlice => able to decode / encode format
-# vdpauinfo: No error message => Great
 
 #### SPECIFIC TO MY SETUP ####
 # Intel Free Drivers
@@ -15,7 +13,7 @@ libva-intel-driver
 
 # Sound Server
 # uncmnt exec /usr/bin/pipewire-pulse in /etc/pipewire/pipewire.conf
-# add user to realtime group
+# usermod -a -G realtime user
 pipewire pipewire-pulse pipewire-jack realtime-privileges #pipewire-alsa
 
 # Performance deamons
@@ -66,6 +64,7 @@ ungoogled-chromium-appimage librewolf-bin
 kdenlive inkscape obs-studio ardour flameshot gimp krita
 
 # Programming
+# rustup toolchain install stable
 eclipse-java-bin eclipse-cpp vscodium-bin ngrok rustup r kite recaf emacs #neovim-nightly-bin
 
 # Communication
@@ -79,9 +78,6 @@ steam kodi
 
 # Virtualization: vitualbox or vmware ?
 fuse2 virtualbox
-
-# enable services cpupower ananicy nohang irqbalance
-# rustup toolchain install stable
 
 # Fonts
 ttf-linux-libertine ttf-inconsolata noto-fonts ttf-font-awesome ttf-anonymous-pro ttf-dejavu ttf-liberation ttf-ms-fonts
