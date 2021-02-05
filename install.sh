@@ -10,8 +10,8 @@ pacman -S --noconfirm fzf neovim
 
 # Helper functions
 cal () { awk "BEGIN{print $*}"; }
-dec () { cal $* - $sctr_l; }
-MiB_B () { cal $1 \* 1048576; }
+dec () { - ($sctr_l - $1); }
+toB () { numfmt --from=iec --suffix=B $1 }
 mnt () { mkdir -p $2 && mount $1 $2; }
 
 #=================================================================
@@ -34,13 +34,12 @@ read -r -p 'Cpu manufacturer (intel/amd): ' cpu_manufacturer
 
 read -r -p 'Block device identifier (sda): ' sdx
 read -r -p 'Boot partition size (512): ' boot
-read -r -p 'Swap partition size (8192): ' swap
 read -r -p 'Root partition size (30720): ' root
 
 # Set blank variables to default values
 [ -z $sdx ] && sdx=sda
 [ -z $boot ] && boot=512
-[ -z $swap ] && swap=8192
+[ -z $swap ] && swap=$(cat /proc/meminfo | grep MemTotal | awk '/MemTotal/ { printf $2*1.5toupper($3) }' | tr 'B' ' ' | numfmt --from=iec)
 [ -z $root ] && root=30720
 
 blk_dev=/dev/"$sdx"
@@ -51,18 +50,18 @@ sctr_l=$(cat /sys/block/$sdx/queue/hw_sector_size)
 #=================================================================
 
 # Calculate disk space for each partition
-boot_end=$(cal 2048 \* sctr_l + $(MiB_B $boot))
-swap_end=$(cal $boot_end + $(MiB_B $swap))
-root_end=$(cal $swap_end + $(MiB_B $root))
+boot_end=$(cal 2048 \* sctr_l + $(toB $boot))
+swap_end=$(cal $boot_end + $(toB $swap))
+root_end=$(cal $swap_end + $(toB $root))
 
 # Create the partitions
 parted $blk_dev mklabel gpt
 parted -a optimal -s $blk_dev -- \
-	 mkpart boot	fat32		2048s $(dec $boot_end)B \
+	 mkpart boot	fat32		2048s		$(dec $boot_end) \
 	 set 1 boot on \
-	 mkpart swap	linux-swap	"$boot_end"B $(dec $swap_end)B  \
-	 mkpart rootfs	ext4 		"$swap_end"B $(dec $root_end)B \
-	 mkpart home	ext4 		"$root_end"B -34s
+	 mkpart swap	linux-swap	$boot_end	$(dec $swap_end) \
+	 mkpart rootfs	ext4 		$swap_end	$(dec $root_end) \
+	 mkpart home	ext4 		$root_end	-34s
 
 # Format the partitions
 mkfs.fat -F32 "$blk_dev"1
