@@ -89,3 +89,4 @@ ttf-linux-libertine ttf-inconsolata noto-fonts ttf-font-awesome ttf-anonymous-pr
 # usermod -a -G realtime,openvpn user
 # rustup toolchain install stable
 # connmanctl config ethernet_6451063bef05_cable nameservers 1.1.1.1 45.90.28.50 45.90.30.50
+# set -U fish_user_paths /usr/local/bin $fish_user_paths
