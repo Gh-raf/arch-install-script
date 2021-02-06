@@ -1,5 +1,5 @@
-# X server
-xorg-server xorg-xinit xorg-xinput xorg-xkill xdg-user-dirs xdo lightdm
+# X server + stuff ?
+xorg-server xorg-xinit xorg-xinput xorg-xkill xdg-user-dirs xdo lightdm dbus-broker
 
 # Drivers
 # Hardware Acceleration <https://wiki.archlinux.org/index.php/Hardware_video_acceleration>
