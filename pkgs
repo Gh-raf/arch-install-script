@@ -52,7 +52,7 @@ mpv mpd ncmpcpp cava zathura sxiv
 lf neomutt stretchly-bin okular xournalpp dolphin screenkey redshift libreoffice-fresh
 
 # Maintainance
-testdisk glances
+testdisk glances htop
 
 # Browsers
 ungoogled-chromium-appimage librewolf-bin
