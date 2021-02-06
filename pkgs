@@ -70,7 +70,7 @@ ripcord element-desktop qbittorrent tutanota-desktop-bin signal-desktop aether-b
 onboard
 
 # Entertainment
-steam kodi
+steam kodi-x11
 
 # Virtualization: vitualbox or vmware ?
 fuse2 virtualbox
