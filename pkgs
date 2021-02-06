@@ -12,8 +12,6 @@ libva-intel-driver
 ####                      ####
 
 # Sound Server
-# uncmnt exec /usr/bin/pipewire-pulse in /etc/pipewire/pipewire.conf
-# usermod -a -G realtime user
 pipewire pipewire-pulse pipewire-jack realtime-privileges #pipewire-alsa
 
 # Performance deamons
@@ -36,7 +34,6 @@ kitty fish tmux dash
 ripgrep exa bat starship-bin fd procs fzf
 
 # Security
-# connmanctl config ethernet_6451063bef05_cable nameservers 1.1.1.1 45.90.28.50 45.90.30.50
 proxychains onionshare openvpn dnscrypt-proxy keepassxc #openvpn-update-resolv-conf-git
 
 # Utility
@@ -64,7 +61,6 @@ ungoogled-chromium-appimage librewolf-bin
 kdenlive inkscape obs-studio ardour flameshot gimp krita
 
 # Programming
-# rustup toolchain install stable
 eclipse-java-bin eclipse-cpp vscodium-bin ngrok rustup r kite recaf emacs #neovim-nightly-bin
 
 # Communication
@@ -81,3 +77,9 @@ fuse2 virtualbox
 
 # Fonts
 ttf-linux-libertine ttf-inconsolata noto-fonts ttf-font-awesome ttf-anonymous-pro ttf-dejavu ttf-liberation ttf-ms-fonts
+
+
+# uncmnt exec /usr/bin/pipewire-pulse in /etc/pipewire/pipewire.conf
+# usermod -a -G realtime,openvpn user
+# rustup toolchain install stable
+# connmanctl config ethernet_6451063bef05_cable nameservers 1.1.1.1 45.90.28.50 45.90.30.50
