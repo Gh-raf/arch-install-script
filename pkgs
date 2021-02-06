@@ -45,11 +45,14 @@ aircrack-ng wireshark-cli hashcat nmap
 # Scripts
 youtube-dl figlet toilet cmatrix lolcat fortune-mod cowsay neofetch wmname xwinwrap-git
 
+# File ?
+zathura libreoffice-fresh
+
 # Media
-mpv mpd ncmpcpp cava zathura sxiv
+mpv mpd ncmpcpp cava sxiv kodi-x11
 
 # Applications
-lf neomutt stretchly-bin okular xournalpp dolphin screenkey redshift libreoffice-fresh
+lf neomutt okular xournalpp dolphin screenkey nitrogen
 
 # Maintainance
 testdisk glances htop
@@ -59,6 +62,9 @@ ungoogled-chromium-appimage librewolf-bin
 
 # Creativity
 kdenlive inkscape obs-studio ardour flameshot gimp krita
+
+# Health
+redshift stretchly-bin
 
 # Programming
 eclipse-java-bin eclipse-cpp vscodium-bin ngrok rustup r kite recaf emacs #neovim-nightly-bin
@@ -70,7 +76,7 @@ ripcord element-desktop qbittorrent tutanota-desktop-bin signal-desktop aether-b
 onboard
 
 # Entertainment
-steam kodi-x11
+steam
 
 # Virtualization: vitualbox or vmware ?
 fuse2 virtualbox
