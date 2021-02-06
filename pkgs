@@ -37,7 +37,7 @@ ripgrep exa bat starship-bin fd procs sd xsv-bin skim dust-bin hyperfine ytop-bi
 proxychains onionshare openvpn dnscrypt-proxy keepassxc #openvpn-update-resolv-conf-git
 
 # Utility
-rsync tdrop-git speedtest-cli reflector syncthing cpulimit
+rsync tdrop-git speedtest-cli reflector syncthing cpulimit p7zip
 
 # Hacking
 aircrack-ng wireshark-cli hashcat nmap
