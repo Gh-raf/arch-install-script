@@ -31,7 +31,7 @@ svox-pico-bin
 kitty fish tmux dash
 
 # Rust replacements
-ripgrep exa bat starship-bin fd procs fzf
+ripgrep exa bat starship-bin fd procs sd xsv-bin skim dust-bin hyperfine ytop-bin
 
 # Security
 proxychains onionshare openvpn dnscrypt-proxy keepassxc #openvpn-update-resolv-conf-git
@@ -52,7 +52,7 @@ mpv mpd ncmpcpp cava zathura sxiv
 lf neomutt stretchly-bin okular xournalpp dolphin screenkey redshift libreoffice-fresh
 
 # Maintainance
-testdisk glances gotop
+testdisk glances
 
 # Browsers
 ungoogled-chromium-appimage librewolf-bin
