@@ -14,6 +14,9 @@ libva-intel-driver
 # Sound Server
 pipewire pipewire-pulse pipewire-jack jack2 realtime-privileges #pipewire-alsa
 
+# Audio
+pro-audio
+
 # Performance deamons
 #irqbalance # (systemd [as hard dep])
 nohang-git # (systemd)
@@ -61,7 +64,7 @@ testdisk glances htop
 ungoogled-chromium-appimage librewolf-bin w3m
 
 # Creativity
-kdenlive inkscape obs-studio ardour flameshot gimp krita
+kdenlive inkscape obs-studio flameshot gimp krita
 
 # Health
 redshift stretchly-bin
