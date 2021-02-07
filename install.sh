@@ -6,7 +6,7 @@ set -e
 [ -d /sys/firmware/efi ] || (printf 'Non-UEFI boot modes aren'\''t supported! Aborting' && \
     sleep 1 && printf . && sleep 1 && printf . && sleep 1 && echo .  && exit)
 
-pacman -S --noconfirm fzf neovim
+pacman -S --noconfirm fzf neovim-nightly-bin
 
 # Helper functions
 cal () { awk "BEGIN{print $*}"; }
