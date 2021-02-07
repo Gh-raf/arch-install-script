@@ -11,10 +11,8 @@ mesa lib32-mesa xf86-video-intel vulkan-intel lib32-vulkan-intel
 libva-intel-driver
 ####                      ####
 
-# Sound Server
-pipewire pipewire-pulse pipewire-jack jack2 realtime-privileges #pipewire-alsa
-
 # Audio
+pipewire pipewire-pulse pipewire-jack pipewire-jack-dropin gst-plugin-pipewire realtime-privileges #pipewire-alsa
 pro-audio
 
 # Performance deamons
