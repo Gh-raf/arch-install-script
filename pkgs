@@ -12,7 +12,7 @@ libva-intel-driver
 ####                      ####
 
 # Sound Server
-pipewire pipewire-pulse pipewire-jack realtime-privileges #pipewire-alsa
+pipewire pipewire-pulse pipewire-jack jack2 realtime-privileges #pipewire-alsa
 
 # Performance deamons
 #irqbalance # (systemd [as hard dep])
