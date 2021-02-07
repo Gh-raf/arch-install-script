@@ -25,8 +25,7 @@ ananicy-git # (runit + openrc + systemd)
 bspwm sxhkd picom-ibhagwan-git polybar python-pywal rofi tldr
 
 # TTS
-python-gtts
-svox-pico-bin
+python-gtts svox-pico-bin
 
 # Terminal
 kitty fish tmux dash
@@ -53,7 +52,7 @@ zathura libreoffice-fresh
 mpv mpd ncmpcpp cava sxiv kodi-x11
 
 # Applications
-lf neomutt okular xournalpp dolphin screenkey nitrogen
+lf neomutt okular xournalpp dolphin screenkey nitrogen flameshot
 
 # Maintainance
 testdisk glances htop
@@ -62,13 +61,13 @@ testdisk glances htop
 ungoogled-chromium-appimage librewolf-bin w3m
 
 # Creativity
-kdenlive inkscape obs-studio flameshot gimp krita
+kdenlive inkscape obs-studio gimp krita
 
 # Health
 redshift stretchly-bin
 
 # Programming
-eclipse-java-bin eclipse-cpp vscodium-bin ngrok rustup r recaf emacs ghidra #neovim-nightly-bin
+eclipse-java-bin eclipse-cpp vscodium-bin ngrok rustup r recaf emacs ghidra
 
 # Communication
 ripcord element-desktop qbittorrent tutanota-desktop-bin signal-desktop aether-bin
@@ -87,7 +86,7 @@ ttf-linux-libertine ttf-inconsolata noto-fonts ttf-font-awesome ttf-anonymous-pr
 
 
 # uncmnt exec /usr/bin/pipewire-pulse in /etc/pipewire/pipewire.conf
-# usermod -a -G realtime,openvpn user
+# usermod -a -G realtime user
 # rustup toolchain install stable
 # connmanctl config ethernet_6451063bef05_cable nameservers 1.1.1.1 45.90.28.50 45.90.30.50
 # set -U fish_user_paths /usr/local/bin $fish_user_paths
