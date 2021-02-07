@@ -58,7 +58,7 @@ lf neomutt okular xournalpp dolphin screenkey nitrogen
 testdisk glances htop
 
 # Browsers
-ungoogled-chromium-appimage librewolf-bin
+ungoogled-chromium-appimage librewolf-bin w3m
 
 # Creativity
 kdenlive inkscape obs-studio ardour flameshot gimp krita
