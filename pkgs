@@ -52,7 +52,7 @@ zathura libreoffice-fresh
 mpv mpd ncmpcpp cava sxiv kodi-x11
 
 # Applications
-lf neomutt okular xournalpp dolphin screenkey nitrogen flameshot
+lf neomutt okular dolphin screenkey nitrogen flameshot
 
 # Maintainance
 testdisk glances htop
