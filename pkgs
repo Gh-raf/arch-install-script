@@ -67,7 +67,7 @@ kdenlive inkscape obs-studio gimp krita
 redshift stretchly-bin
 
 # Programming
-eclipse-java-bin eclipse-cpp vscodium-bin ngrok rustup r recaf emacs ghidra
+intellij-idea-community-edition eclipse-cpp vscodium-bin ngrok rustup r recaf emacs ghidra
 
 # Communication
 ripcord element-desktop qbittorrent tutanota-desktop-bin signal-desktop aether-bin
