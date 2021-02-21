@@ -3,7 +3,6 @@ xorg-server xorg-xinit xorg-xinput xorg-xkill xdg-user-dirs xdo lightdm dbus-bro
 
 # Drivers
 # Hardware Acceleration <https://wiki.archlinux.org/index.php/Hardware_video_acceleration>
-
 #### SPECIFIC TO MY SETUP ####
 # Intel Free Drivers
 mesa lib32-mesa xf86-video-intel vulkan-intel lib32-vulkan-intel
@@ -25,7 +24,7 @@ ananicy-git # (runit + openrc + systemd)
 bspwm sxhkd picom-ibhagwan-git polybar python-pywal rofi tldr
 
 # TTS
-python-gtts svox-pico-bin
+python-gtts flite
 
 # Terminal
 kitty fish tmux dash
