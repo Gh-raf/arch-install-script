@@ -83,9 +83,8 @@ fuse2 virtualbox
 # Fonts
 ttf-linux-libertine ttf-inconsolata noto-fonts ttf-font-awesome ttf-anonymous-pro ttf-dejavu ttf-liberation ttf-ms-fonts
 
-
 # uncmnt exec /usr/bin/pipewire-pulse in /etc/pipewire/pipewire.conf
 # usermod -a -G realtime user
 # rustup toolchain install stable
 # connmanctl config ethernet_6451063bef05_cable nameservers 1.1.1.1 45.90.28.50 45.90.30.50
-# set -U fish_user_paths /usr/local/bin $fish_user_paths
+# set -U fish_user_paths ~/app $fish_user_paths
