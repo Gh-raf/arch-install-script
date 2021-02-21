@@ -42,7 +42,7 @@ rsync tdrop-git speedtest-cli reflector syncthing cpulimit p7zip
 aircrack-ng wireshark-cli hashcat nmap
 
 # Scripts
-youtube-dl figlet toilet cmatrix lolcat fortune-mod cowsay neofetch wmname xwinwrap-git
+youtube-dl figlet toilet cmatrix lolcat fortune-mod cowsay pfetch-git neofetch screenfetch wmname xwinwrap-git
 
 # File ?
 zathura libreoffice-fresh
