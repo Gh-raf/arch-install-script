@@ -38,7 +38,7 @@ sctr_l=$(cat /sys/block/$sdx/queue/hw_sector_size)
 
 # Helper functions
 cal () { awk "BEGIN{print $*}"; }
-dec () { - $(cal $sctr_l - $*); }
+dec () { cal - \($sctr_l - $1\)\"B\"; }
 toB () { numfmt --from=iec --suffix=B $1 }
 mnt () { mkdir -p $2 && mount $1 $2; }
 
