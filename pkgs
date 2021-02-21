@@ -30,7 +30,7 @@ python-gtts espeak-ng espeak-ng-espeak mbrola-voices-fr4
 kitty fish tmux dash
 
 # Rust replacements
-ripgrep exa bat starship-bin fd procs sd xsv-bin skim dust-bin hyperfine ytop-bin
+ripgrep exa bat starship-bin fd procs sd xsv-bin skim dust-bin hyperfine ytop-bin fzf
 
 # Security
 proxychains onionshare openvpn dnscrypt-proxy keepassxc #openvpn-update-resolv-conf-git
