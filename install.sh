@@ -6,32 +6,24 @@ set -e
 [ -d /sys/firmware/efi ] || (printf 'Non-UEFI boot modes aren'\''t supported! Aborting' && \
     sleep 1 && printf . && sleep 1 && printf . && sleep 1 && echo .  && exit)
 
-pacman -S --noconfirm fzf neovim-nightly-bin
-
-# Helper functions
-cal () { awk "BEGIN{print $*}"; }
-dec () { - ($sctr_l - $1); }
-toB () { numfmt --from=iec --suffix=B $1 }
-mnt () { mkdir -p $2 && mount $1 $2; }
+pacman -S --noconfirm fzf nano
 
 #=================================================================
 #                           User Info
 #=================================================================
-
-lsblk
 
 read -r -p 'Username: ' username
 read -r -p 'Hostname: ' hostname
 read -r -p 'Keymap: ' keymap
 
 printf 'Select a timezone: '
-zone=$(find /usr/share/zoneinfo -type f | sed 's/\/usr\/share\/zoneinfo\///g' | fzf)
+zone=$(find /usr/share/zoneinfo -type f | sed 's/\/usr\/share\/zoneinfo\///g' | fzf --height=99)
 
 printf 'Select a locale: '
-locale=$(cat /etc/locale.gen | grep -E '^#[[:alnum:]]' | sed 's/#//g' | fzf)
+locale=$(cat /etc/locale.gen | grep -E '^#[[:alnum:]]' | sed 's/#//g' | fzf --height=99)
 
 read -r -p 'Cpu manufacturer (intel/amd): ' cpu_manufacturer
-
+lsblk
 read -r -p 'Block device identifier (sda): ' sdx
 read -r -p 'Root partition size (30720): ' root
 
@@ -43,6 +35,12 @@ read -r -p 'Root partition size (30720): ' root
 
 blk_dev=/dev/"$sdx"
 sctr_l=$(cat /sys/block/$sdx/queue/hw_sector_size)
+
+# Helper functions
+cal () { awk "BEGIN{print $*}"; }
+dec () { - $(cal $sctr_l - $*); }
+toB () { numfmt --from=iec --suffix=B $1 }
+mnt () { mkdir -p $2 && mount $1 $2; }
 
 #=================================================================
 #                       Preparing the disk
@@ -123,22 +121,26 @@ useradd -m -g wheel -G audio,video,storage,optical $username
 chpasswd <<< "$username:$username"
 chpasswd <<< "root:root"
 
-tmp='%wheel ALL=(ALL) NOPASSWD: ALL'
+read -r -p 'Do you want to enable additional pacman repositories (Y/n)? ' ans
+[[ -z $ans || $ans = Y || $ans = y ]] && nano /etc/pacman.conf
+
 #======== Gimme perms plz ========#
-sed -i 's/.*'$tmp'.*/'$tmp'/' /etc/sudoers
+sed -Ei 's/#[[:blank:]]+(''\%wheel ALL\=\(ALL\) NOPASSWD\: ALL'')/\1/' /etc/sudoers
+
+pkgs=$(sed -e 's/#.*$//' -e 's/ /\n/' pkgs)
+
+cat << eof | sudo -u $username /bin/bash
 
 #======== YAY! ========#
-cd /tmp && git clone https://aur.archlinux.org/yay.git && cd yay
-yes | sudo -Su $username makepkg -si && rm -rf ../yay
+mkdir tmp && cd tmp
+git clone https://aur.archlinux.org/yay.git && cd yay
+yes | makepkg -si
+rm -rf ../yay
 
-bl='[[:blank:]]'
-nbl='[^[:blank:] && ^#]'
 #======== Additional packages ========#
-read -r -p 'Do you want to enable additional pacman repositories (Y/n)? ' ans
-[[ -z $ans || $ans = Y || $ans = y ]] && nvim /etc/pacman.conf
+yay -S --noconfirm $pkgs
 
-sudo -u $username yay -S --noconfirm \
-    $(sed -E -e 's/^('$nbl'+('$bl'+'$nbl'+)*)*'$bl'*#.*$/\1/g' -e '/^$/d' pkgs)
+eof
 
 EOF
 
