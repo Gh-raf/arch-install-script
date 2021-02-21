@@ -48,7 +48,7 @@ youtube-dl figlet toilet cmatrix lolcat fortune-mod cowsay pfetch-git neofetch s
 zathura libreoffice-fresh
 
 # Media
-mpv mpd ncmpcpp cava sxiv kodi-x11
+mpv mpd ncmpcpp cava sxiv
 
 # Applications
 lf neomutt okular dolphin screenkey nitrogen flameshot
@@ -66,7 +66,7 @@ kdenlive inkscape obs-studio gimp krita
 redshift stretchly-bin
 
 # Programming
-intellij-idea-community-edition eclipse-cpp vscodium-bin ngrok rustup r recaf emacs ghidra
+intellij-idea-community-edition vscodium-bin ngrok rustup r recaf emacs ghidra
 
 # Communication
 ripcord element-desktop qbittorrent tutanota-desktop-bin signal-desktop aether-bin
@@ -83,6 +83,7 @@ fuse2 virtualbox
 # Fonts
 ttf-linux-libertine ttf-inconsolata noto-fonts ttf-font-awesome ttf-anonymous-pro ttf-dejavu ttf-liberation ttf-ms-fonts
 
+# chsh -s /bin/fish
 # uncmnt exec /usr/bin/pipewire-pulse in /etc/pipewire/pipewire.conf
 # usermod -a -G realtime user
 # rustup toolchain install stable
