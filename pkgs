@@ -24,7 +24,7 @@ ananicy-git # (runit + openrc + systemd)
 bspwm sxhkd picom-ibhagwan-git polybar python-pywal rofi tldr
 
 # TTS
-python-gtts espeak-ng mbrola-voices-fr4
+python-gtts espeak-ng espeak-ng-espeak mbrola-voices-fr4
 
 # Terminal
 kitty fish tmux dash
