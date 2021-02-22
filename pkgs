@@ -1,5 +1,5 @@
 # X server + stuff ?
-xorg-server xorg-xinit xorg-xinput xorg-xkill xdg-user-dirs xdo lightdm dbus-broker
+xorg-server xorg-xinit xorg-xinput xorg-xkill xdg-user-dirs xdo lightdm
 
 # Drivers
 # Hardware Acceleration <https://wiki.archlinux.org/index.php/Hardware_video_acceleration>
@@ -69,7 +69,7 @@ redshift stretchly-bin
 intellij-idea-community-edition vscodium-bin ngrok rustup r recaf emacs ghidra neovim-nightly-bin jdk8-openjdk
 
 # Communication
-ripcord element-desktop qbittorrent tutanota-desktop-bin signal-desktop aether-bin
+ripcord element-desktop aether-bin tutanota-desktop-bin signal-desktop qbittorrent
 
 # Accessibility
 onboard
