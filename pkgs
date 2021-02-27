@@ -76,7 +76,7 @@ ripcord element-desktop aether-bin tutanota-desktop-bin signal-desktop qbittorre
 onboard
 
 # Entertainment
-steam lutris #heroic-games-launcher-bin legendary
+steam wine lutris #heroic-games-launcher-bin legendary
 
 # Virtualization: vitualbox or vmware ?
 fuse2 virtualbox
