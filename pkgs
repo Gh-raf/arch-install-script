@@ -43,7 +43,7 @@ rsync tdrop-git speedtest-cli reflector syncthing cpulimit p7zip
 aircrack-ng wireshark-cli hashcat nmap
 
 # Scripts
-youtube-dl figlet toilet cmatrix lolcat fortune-mod cowsay pfetch-git neofetch screenfetch wmname xwinwrap-git
+youtube-dl figlet toilet cmatrix lolcat fortune-mod cowsay pfetch-git neofetch screenfetch wmname xwinwrap-git kickthemout-git
 
 # File ?
 zathura libreoffice-fresh
@@ -76,7 +76,7 @@ ripcord element-desktop aether-bin tutanota-desktop-bin signal-desktop qbittorre
 onboard
 
 # Entertainment
-steam lutris heroic-games-launcher-bin legendary
+steam lutris #heroic-games-launcher-bin legendary
 
 # Virtualization: vitualbox or vmware ?
 fuse2 virtualbox
