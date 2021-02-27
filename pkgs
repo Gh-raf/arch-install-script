@@ -16,6 +16,7 @@ pro-audio
 
 # Performance deamons
 #irqbalance # (systemd [as hard dep])
+cpulimit
 cpupower # (openrc + systemd) this deamon does nothing but sets default config on startup
 ananicy-git # (runit + openrc + systemd)
 
