@@ -1,5 +1,5 @@
 # X server + stuff ?
-xorg-server xorg-xinit xorg-xinput xorg-xkill xdg-user-dirs xdo lightdm
+xorg-server xorg-xinit xorg-xinput xorg-xkill xdg-user-dirs xdo xsel lightdm
 
 # Drivers
 # Hardware Acceleration <https://wiki.archlinux.org/index.php/Hardware_video_acceleration>
@@ -33,7 +33,7 @@ kitty fish tmux dash
 ripgrep exa bat starship-bin fd procs sd xsv-bin skim dust-bin hyperfine ytop-bin fzf
 
 # Security
-proxychains onionshare openvpn dnscrypt-proxy keepassxc #openvpn-update-resolv-conf-git
+proxychains onionshare openvpn dnscrypt-proxy keepassxc rhash #openvpn-update-resolv-conf-git
 
 # Utility
 rsync tdrop-git speedtest-cli reflector syncthing cpulimit p7zip
@@ -75,7 +75,7 @@ ripcord element-desktop aether-bin tutanota-desktop-bin signal-desktop qbittorre
 onboard
 
 # Entertainment
-steam
+steam lutris heroic-games-launcher-bin heroic
 
 # Virtualization: vitualbox or vmware ?
 fuse2 virtualbox
