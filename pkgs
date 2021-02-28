@@ -76,7 +76,7 @@ ripcord element-desktop aether-bin tutanota-desktop-bin signal-desktop qbittorre
 onboard
 
 # Entertainment
-steam wine winetricks wine-mono wine_gecko lutris #heroic-games-launcher-bin legendary
+steam wine winetricks wine-mono wine-gecko lib32-gnutls lutris #heroic-games-launcher-bin legendary
 
 # Virtualization: vitualbox or vmware ?
 fuse2 virtualbox
@@ -84,6 +84,7 @@ fuse2 virtualbox
 # Fonts
 ttf-linux-libertine ttf-inconsolata noto-fonts ttf-font-awesome ttf-anonymous-pro ttf-dejavu ttf-liberation ttf-ms-fonts
 
+# setcap cap_net_raw+epi /usr/bin/wine-preloader
 # chsh -s /bin/fish
 # uncmnt exec /usr/bin/pipewire-pulse in /etc/pipewire/pipewire.conf
 # usermod -a -G realtime user
