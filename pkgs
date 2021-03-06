@@ -79,7 +79,7 @@ onboard
 steam wine winetricks wine-mono wine-gecko lib32-gnutls lutris #heroic-games-launcher-bin legendary
 
 # Virtualization: vitualbox or vmware ?
-fuse2 virtualbox
+vmware-workstation
 
 # Fonts
 ttf-linux-libertine ttf-inconsolata noto-fonts ttf-font-awesome ttf-anonymous-pro ttf-dejavu ttf-liberation ttf-ms-fonts
