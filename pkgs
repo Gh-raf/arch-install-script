@@ -55,7 +55,7 @@ mpv mpd ncmpcpp cava sxiv
 lf neomutt okular dolphin screenkey nitrogen flameshot
 
 # Maintainance
-testdisk glances htop
+testdisk glances htop bpytop
 
 # Browsers
 ungoogled-chromium-appimage librewolf-bin w3m
