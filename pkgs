@@ -2,7 +2,6 @@
 xorg-server xorg-xinit xorg-xinput xorg-xkill xdg-user-dirs xdo xsel lightdm
 
 # Drivers
-# Hardware Acceleration <https://wiki.archlinux.org/index.php/Hardware_video_acceleration>
 #### SPECIFIC TO MY SETUP ####
 # Intel Free Drivers
 mesa lib32-mesa xf86-video-intel vulkan-intel lib32-vulkan-intel
@@ -11,15 +10,15 @@ libva-intel-driver
 ####                      ####
 
 # Audio
-pipewire pipewire-pulse pipewire-jack pipewire-jack-dropin gst-plugin-pipewire realtime-privileges #pipewire-alsa
+pipewire pipewire-jack pipewire-jack-dropin pipewire-pulse pulseeffects gst-plugin-pipewire realtime-privileges
 pro-audio
 
 # Performance deamons
-#irqbalance # (systemd [as hard dep])
+irqbalance
 cpulimit
 gamemode lib32-gamemode
-cpupower # (openrc + systemd) this deamon does nothing but sets default config on startup
-ananicy-git # (runit + openrc + systemd)
+cpupower
+ananicy-git
 
 # Desktop
 bspwm sxhkd picom-ibhagwan-git polybar python-pywal rofi tldr
@@ -34,7 +33,7 @@ kitty fish tmux dash
 ripgrep exa bat starship-bin fd procs sd xsv-bin skim dust-bin hyperfine ytop-bin fzf
 
 # Security
-proxychains onionshare openvpn dnscrypt-proxy keepassxc rhash #openvpn-update-resolv-conf-git
+proxychains onionshare openvpn rhash #openvpn-update-resolv-conf-git
 
 # Utility
 rsync tdrop-git speedtest-cli reflector syncthing cpulimit p7zip
@@ -70,13 +69,13 @@ redshift stretchly-bin
 intellij-idea-community-edition vscodium-bin ngrok rustup r recaf emacs ghidra neovim-nightly-bin jdk8-openjdk
 
 # Communication
-ripcord element-desktop aether-bin tutanota-desktop-bin signal-desktop qbittorrent
+ripcord element-desktop aether-bin tutanota-desktop-bin qbittorrent
 
 # Accessibility
 onboard
 
 # Entertainment
-steam wine winetricks wine-mono wine-gecko lib32-gnutls lutris #heroic-games-launcher-bin legendary
+steam
 
 # Virtualization: vitualbox or vmware ?
 vmware-workstation
@@ -84,10 +83,9 @@ vmware-workstation
 # Fonts
 ttf-linux-libertine ttf-inconsolata noto-fonts ttf-font-awesome ttf-anonymous-pro ttf-dejavu ttf-liberation ttf-ms-fonts
 
-# setcap cap_net_raw+epi /usr/bin/wine-preloader
 # chsh -s /bin/fish
 # uncmnt exec /usr/bin/pipewire-pulse in /etc/pipewire/pipewire.conf
 # usermod -a -G realtime user
 # rustup toolchain install stable
-# connmanctl config ethernet_6451063bef05_cable nameservers 1.1.1.1 45.90.28.50 45.90.30.50
-# set -U fish_user_paths ~/app $fish_user_paths
+# set -Ua fish_user_paths ~/app
+# ln -sf /bin/dash /bin/sh
