@@ -69,10 +69,7 @@ redshift stretchly-bin
 intellij-idea-community-edition vscodium-bin ngrok rustup r recaf emacs ghidra neovim-nightly-bin jdk8-openjdk
 
 # Communication
-ripcord element-desktop aether-bin tutanota-desktop-bin qbittorrent
-
-# Accessibility
-onboard
+ripcord tutanota-desktop-bin qbittorrent
 
 # Entertainment
 steam
