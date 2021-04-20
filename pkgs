@@ -63,7 +63,9 @@ ungoogled-chromium-appimage librewolf-bin w3m
 kdenlive inkscape obs-studio gimp krita
 
 # Health
-redshift stretchly-bin
+redshift #pilorama safeeyes workerave gnomepomodoro solanum
+#elementaryplanner
+#activitywatch
 
 # Programming
 intellij-idea-community-edition vscodium-bin ngrok rustup r recaf emacs ghidra neovim-nightly-bin jdk8-openjdk
