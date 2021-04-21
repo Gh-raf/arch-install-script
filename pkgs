@@ -30,19 +30,19 @@ python-gtts espeak-ng espeak-ng-espeak mbrola-voices-fr4
 kitty fish tmux dash
 
 # Rust replacements
-ripgrep exa bat starship-bin fd procs sd xsv-bin skim dust-bin hyperfine ytop-bin fzf
+ripgrep exa bat starship-bin fd procs sd xsv-bin skim dust-bin hyperfine ytop-bin
 
 # Security
 proxychains onionshare openvpn rhash #openvpn-update-resolv-conf-git
 
 # Utility
-rsync tdrop-git speedtest-cli reflector syncthing cpulimit p7zip
+rsync tdrop-git speedtest-cli reflector cpulimit p7zip #syncthing
 
 # Hacking
 aircrack-ng wireshark-cli hashcat nmap
 
 # Scripts
-youtube-dl figlet toilet cmatrix lolcat fortune-mod cowsay pfetch-git neofetch screenfetch wmname xwinwrap-git kickthemout-git
+youtube-dl cmatrix lolcat fortune-mod pfetch-git neofetch screenfetch wmname xwinwrap-git kickthemout-git
 
 # File ?
 zathura libreoffice-fresh
@@ -57,7 +57,7 @@ lf neomutt okular dolphin screenkey nitrogen flameshot
 testdisk glances htop bpytop
 
 # Browsers
-ungoogled-chromium-appimage librewolf-bin w3m
+librewolf-bin w3m
 
 # Creativity
 kdenlive inkscape obs-studio gimp krita
@@ -68,7 +68,10 @@ redshift #safeeyes workrave gnomepomodoro solanum tomate-gtk
 #activitywatch
 
 # Programming
-intellij-idea-community-edition vscodium-bin ngrok rustup r recaf emacs ghidra neovim-nightly-bin jdk8-openjdk
+ngrok rustup r recaf  ghidra jdk8-openjdk
+
+# Editors
+intellij-idea-community-edition vscodium-bin code-marketplace emacs neovim-nightly-bin
 
 # Communication
 ripcord tutanota-desktop-bin qbittorrent
