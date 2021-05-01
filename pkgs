@@ -74,7 +74,7 @@ ngrok rustup r recaf  ghidra jdk8-openjdk
 intellij-idea-community-edition vscodium-bin emacs neovim-nightly-bin
 
 # Communication
-ripcord tutanota-desktop-bin qbittorrent
+ripcord tutanota-desktop-bin qbittorrent pidgin
 
 # Entertainment
 steam
