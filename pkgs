@@ -63,18 +63,18 @@ librewolf-bin w3m
 kdenlive inkscape obs-studio gimp krita
 
 # Health
-redshift #safeeyes workrave gnomepomodoro solanum tomate-gtk
+redshift
 #elementaryplanner
 #activitywatch
 
 # Programming
-ngrok rustup r recaf  ghidra jdk8-openjdk
+ngrok rustup r recaf ghidra jdk8-openjdk
 
 # Editors
 intellij-idea-community-edition vscodium-bin emacs neovim-nightly-bin
 
 # Communication
-ripcord tutanota-desktop-bin qbittorrent pidgin
+ripcord tutanota-desktop-bin qbittorrent
 
 # Entertainment
 steam
