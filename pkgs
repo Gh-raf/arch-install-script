@@ -75,6 +75,8 @@ intellij-idea-community-edition vscodium-bin emacs neovim-nightly-bin
 
 # Communication
 ripcord tutanota-desktop-bin qbittorrent
+jami element-desktop
+dino gajim
 
 # Entertainment
 steam
