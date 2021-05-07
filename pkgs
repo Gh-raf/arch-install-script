@@ -1,5 +1,5 @@
 # X server + stuff ?
-xorg-server xorg-xinit xorg-xinput xorg-xkill xdg-user-dirs xdo xsel lightdm
+xorg xorg-xinit xdg-user-dirs xdo xsel lightdm
 
 # Drivers
 #### SPECIFIC TO MY SETUP ####
@@ -63,9 +63,7 @@ librewolf-bin w3m
 kdenlive inkscape obs-studio gimp krita
 
 # Health
-redshift
-#elementaryplanner
-#activitywatch
+redshift #elementaryplanner activitywatch
 
 # Programming
 ngrok rustup r recaf ghidra jdk8-openjdk
@@ -74,8 +72,7 @@ ngrok rustup r recaf ghidra jdk8-openjdk
 intellij-idea-community-edition vscodium-bin emacs neovim-nightly-bin
 
 # Communication
-ripcord tutanota-desktop-bin qbittorrent
-jami element-desktop gajim
+qbittorrent jami element-desktop gajim
 
 # Entertainment
 steam
