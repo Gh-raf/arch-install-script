@@ -72,7 +72,7 @@ ngrok rustup r recaf ghidra jdk8-openjdk
 intellij-idea-community-edition vscodium-bin emacs neovim-nightly-bin
 
 # Communication
-qbittorrent jami element-desktop gajim
+qbittorrent jami element-desktop gajim lightcord
 
 # Entertainment
 steam
