@@ -27,7 +27,7 @@ bspwm sxhkd picom-ibhagwan-git polybar python-pywal rofi tldr
 python-gtts espeak-ng espeak-ng-espeak mbrola-voices-fr4
 
 # Terminal
-kitty fish tmux dash
+kitty fish dash
 
 # Rust replacements
 ripgrep exa bat starship-bin fd procs sd xsv-bin skim dust-bin hyperfine ytop-bin
