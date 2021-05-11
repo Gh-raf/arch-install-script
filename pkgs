@@ -21,7 +21,7 @@ cpupower
 ananicy-git
 
 # Desktop
-bspwm sxhkd picom-ibhagwan-git polybar python-pywal rofi tldr
+bspwm sxhkd picom-ibhagwan-git polybar python-pywal rofi tldr dunst
 
 # TTS
 python-gtts espeak-ng espeak-ng-espeak mbrola-voices-fr4
@@ -75,7 +75,7 @@ intellij-idea-community-edition vscodium-bin emacs neovim-nightly-bin
 qbittorrent jami element-desktop gajim lightcord
 
 # Entertainment
-steam
+steam steamcmd steam-tui-bin
 
 # Virtualization: vitualbox or vmware ?
 vmware-workstation
