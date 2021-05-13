@@ -30,10 +30,10 @@ python-gtts espeak-ng espeak-ng-espeak mbrola-voices-fr4
 kitty fish dash
 
 # Rust replacements
-ripgrep exa bat starship-bin fd procs sd xsv-bin skim dust-bin hyperfine ytop-bin
+ripgrep exa bat starship-bin fd procs skim dust-bin hyperfine ytop-bin
 
 # Security
-proxychains onionshare openvpn rhash #openvpn-update-resolv-conf-git
+proxychains onionshare rhash #openvpn openvpn-update-resolv-conf-git
 
 # Utility
 rsync tdrop-git speedtest-cli reflector cpulimit p7zip #syncthing
@@ -72,7 +72,7 @@ ngrok rustup r recaf ghidra jdk8-openjdk
 intellij-idea-community-edition vscodium-bin emacs neovim-nightly-bin
 
 # Communication
-qbittorrent jami element-desktop gajim lightcord
+qbittorrent jami element-desktop lightcord #gajim[xmpp]
 
 # Entertainment
 steam steamcmd steam-tui-bin
