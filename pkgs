@@ -42,7 +42,10 @@ rsync tdrop-git speedtest-cli reflector cpulimit p7zip #syncthing
 aircrack-ng wireshark-cli hashcat nmap
 
 # Scripts
-youtube-dl cmatrix lolcat fortune-mod pfetch-git neofetch screenfetch wmname xwinwrap-git kickthemout-git inotify-tools trash-cli
+pfetch-git neofetch screenfetch
+youtube-dl
+cmatrix lolcat fortune-mod
+wmname inotify-tools trash-cli
 
 # File ?
 zathura libreoffice-fresh
