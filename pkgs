@@ -87,5 +87,4 @@ ttf-linux-libertine ttf-inconsolata noto-fonts ttf-font-awesome ttf-anonymous-pr
 # uncmnt exec /usr/bin/pipewire-pulse in /etc/pipewire/pipewire.conf
 # usermod -a -G realtime user
 # rustup toolchain install stable
-# ln -sf /bin/dash /bin/sh
 # ln -sf /home/adderall/.local/share/VSCodium/ /usr/share/vscodium-bin/data
