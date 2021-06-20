@@ -39,10 +39,10 @@ proxychains #openvpn openvpn-update-resolv-conf-git
 rsync tdrop-git reflector cpulimit p7zip #syncthing
 
 # Scripts
-pfetch-git neofetch screenfetch
 youtube-dl
-cmatrix lolcat fortune-mod
 wmname inotify-tools trash-cli
+pfetch-git neofetch screenfetch
+cmatrix lolcat fortune-mod
 
 # File ?
 zathura libreoffice-fresh
@@ -57,22 +57,24 @@ lf neomutt okular dolphin screenkey nitrogen flameshot
 testdisk glances bpytop
 
 # Browsers
-firefox w3m
+firefox-developer-edition w3m
 
 # Creativity
 kdenlive obs-studio gimp inkscape
 
 # Health
-redshift #elementaryplanner activitywatch
+redshift
+
+# Programming languages
+rustup r jdk8-openjdk
 
 # Programming
-ngrok rustup r recaf ghidra jdk8-openjdk gitkraken
-
-# Editors
-intellij-idea-community-edition vscodium-bin emacs neovim-nightly-bin
+neovim-nightly-bin emacs
+ngrok gitkraken recaf ghidra
+intellij-idea-community-edition vscodium-bin
 
 # Communication
-qbittorrent jami element-desktop ripcord #gajim[xmpp]
+qbittorrent jami element-desktop ripcord
 
 # Entertainment
 steam steamcmd steam-tui-bin
@@ -84,7 +86,6 @@ vmware-workstation
 ttf-linux-libertine ttf-inconsolata noto-fonts ttf-font-awesome ttf-anonymous-pro ttf-dejavu ttf-liberation ttf-ms-fonts
 
 # chsh -s /bin/fish
-# uncmnt exec /usr/bin/pipewire-pulse in /etc/pipewire/pipewire.conf
 # usermod -a -G realtime user
 # rustup toolchain install stable
 # ln -sf /home/adderall/.local/share/VSCodium/ /usr/share/vscodium-bin/data
