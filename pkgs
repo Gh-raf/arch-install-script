@@ -71,7 +71,7 @@ rustup r jdk8-openjdk
 # Programming
 neovim-nightly-bin emacs
 ngrok gitkraken recaf ghidra
-intellij-idea-community-edition vscodium-bin
+vscodium-bin
 
 # Communication
 qbittorrent jami element-desktop ripcord
