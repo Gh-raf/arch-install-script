@@ -1,5 +1,5 @@
 # X server + stuff ?
-xorg xorg-xinit xdg-user-dirs xdo xsel lightdm
+xorg xorg-xinit xdg-user-dirs lightdm
 
 # Drivers
 #### SPECIFIC TO MY SETUP ####
@@ -40,18 +40,18 @@ rsync tdrop-git reflector cpulimit p7zip #syncthing
 
 # Scripts
 youtube-dl
-wmname inotify-tools trash-cli
+wmname xdo xsel inotify-tools trash-cli
 pfetch-git neofetch screenfetch
 cmatrix lolcat fortune-mod
 
-# File ?
-zathura libreoffice-fresh
+# Documents
+okular zathura libreoffice-fresh
 
 # Media
 mpv mpd ncmpcpp cava sxiv
 
 # Applications
-lf neomutt okular dolphin screenkey nitrogen flameshot
+screenkey nitrogen flameshot
 
 # Maintainance
 testdisk glances bpytop
@@ -59,7 +59,7 @@ testdisk glances bpytop
 # Browsers
 firefox-developer-edition w3m
 
-# Creativity
+# Content Creation
 kdenlive obs-studio gimp inkscape
 
 # Health
@@ -68,9 +68,14 @@ redshift
 # Programming languages
 rustup r jdk8-openjdk
 
-# Programming
+# Reverse Engineering
+recaf ghidra
+
+# Editors
 neovim-nightly-bin emacs
-ngrok gitkraken recaf ghidra
+
+# Programming
+gitkraken jetbrains-toolbox ngrok
 vscodium-bin
 
 # Communication
