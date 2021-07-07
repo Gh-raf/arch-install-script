@@ -3,10 +3,8 @@ xorg xorg-xinit xdg-user-dirs lightdm
 
 # Drivers
 #### SPECIFIC TO MY SETUP ####
-# Intel Free Drivers
-mesa lib32-mesa xf86-video-intel vulkan-intel lib32-vulkan-intel
-# Intel Acceleration
-libva-intel-driver
+mesa       vulkan-intel       xf86-video-intel libva-intel-driver
+lib32-mesa lib32-vulkan-intel
 ####                      ####
 
 # Audio
