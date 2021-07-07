@@ -125,7 +125,7 @@ read -r -p 'Do you want to enable additional pacman repositories (Y/n)? ' ans
 #======== Gimme perms plz ========#
 sed -Ei 's/#[[:blank:]]+(''\%wheel ALL\=\(ALL\) NOPASSWD\: ALL'')/\1/' /etc/sudoers
 
-pkgs=$(sed -e 's/#.*$//' -e 's/ /\n/' pkgs)
+pkgs=$(sed -e 's/#.*$//' pkgs)
 
 cat << eof | sudo -u $username /bin/bash
 
