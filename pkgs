@@ -9,7 +9,8 @@ lib32-mesa lib32-vulkan-intel
 
 # Audio
 pipewire pipewire-jack pipewire-jack-dropin pipewire-pulse pulseeffects gst-plugin-pipewire realtime-privileges
-pro-audio
+# pro-audio
+qjackctl
 
 # Performance deamons
 irqbalance
@@ -77,13 +78,12 @@ gitkraken jetbrains-toolbox ngrok
 vscodium-bin
 
 # Communication
-qbittorrent jami element-desktop ripcord
+qbittorrent jami element-desktop
 
 # Entertainment
 steam steamcmd steam-tui-bin
 
 # Virtualization: vitualbox or vmware ?
-vmware-workstation
 
 # Fonts
 ttf-linux-libertine ttf-inconsolata noto-fonts ttf-font-awesome ttf-anonymous-pro ttf-dejavu ttf-liberation ttf-ms-fonts
