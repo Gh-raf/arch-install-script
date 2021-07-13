@@ -71,11 +71,10 @@ rustup r jdk8-openjdk
 recaf ghidra
 
 # Editors
-neovim-nightly-bin emacs
+neovim-nightly-bin emacs code
 
 # Programming
 gitkraken jetbrains-toolbox ngrok
-vscodium-bin
 
 # Communication
 qbittorrent jami element-desktop
