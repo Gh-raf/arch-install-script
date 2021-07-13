@@ -8,7 +8,7 @@ lib32-mesa lib32-vulkan-intel
 ####                      ####
 
 # Audio
-pipewire pipewire-jack pipewire-jack-dropin pipewire-pulse pulseeffects gst-plugin-pipewire realtime-privileges
+pipewire pipewire-jack pipewire-jack-dropin pipewire-pulse easyeffects gst-plugin-pipewire realtime-privileges
 # pro-audio
 qjackctl
 
